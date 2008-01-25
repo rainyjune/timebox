@@ -27,3 +27,4 @@ href="#">登录</A> </DIV>
 <A href="about.php#about_us">关于我们的承诺</A>  </DIV>
 </DIV></DIV><!-- end nav -->
 <DIV class=shadowStrip></DIV><!-- body top content -->
+<DIV class=contentWrapper>
