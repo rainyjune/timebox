@@ -22,9 +22,9 @@ href="#">登录</A> </DIV>
 <A href="letter.php">信件箱</A> 
 <A href="scenery.php">别人的风景</A> 
 <A href="message_board.php">留言板</A> 
-<A href="http://hellojinjie.web4chinese.com/forum/" target="_blank">苹果论坛</A>
 <A href="about.php">关于这个站点</A>
-<A href="about.php#about_us">关于我们的承诺</A>  </DIV>
+<A href="about.php#about_us">关于我们的承诺</A>
+<A href="http://hellojinjie.web4chinese.com/forum/" target="_blank">苹果论坛</A>  </DIV>
 </DIV></DIV><!-- end nav -->
 <DIV class=shadowStrip></DIV><!-- body top content -->
 <DIV class=contentWrapper>
