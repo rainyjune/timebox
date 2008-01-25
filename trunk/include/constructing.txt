@@ -1,7 +1,9 @@
 ﻿<DIV class=contentWrapper><!-- inner top content --><!-- end inner top content --><!-- content --><!-- content block -->
 <DIV class=contentBlock>
 <DIV class=contentText>
-<H3>Under constructing......<P>It will be ready in a few weeks......<p><a href = "http://hellojinjie.web4chinese.com/forum">先到苹果论坛来坐坐吧！</a></H3>
+<H3>Under constructing......<P>It will be ready in a few weeks......
+<p><p><a href = "about.php">关于这个网站</a>
+<p><p><a href = "http://hellojinjie.web4chinese.com/forum">先到苹果论坛来坐坐吧！</a></H3>
 <P>&nbsp;</P>
 </DIV></DIV><!-- end content block -->
 <!-- content block -->
