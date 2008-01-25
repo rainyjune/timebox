@@ -2,6 +2,7 @@
 	include('include/overall_head.txt');
 ?>
 
+<DIV class=contentWrapper><!-- inner top content -->
 
 <DIV class=contentBlock>
 <DIV class=contentText>
@@ -37,6 +38,7 @@
 </DIV></DIV>
 <!-- content block -->
 <!-- content block -->
+</DIV>
 
 
 <?php
