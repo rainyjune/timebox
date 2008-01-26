@@ -1,5 +1,5 @@
 ﻿<?php
-	include('include/overall_head.txt');
+	include('include/overall_head.html');
 ?>
 
 <DIV class=contentWrapper><!-- inner top content -->
@@ -42,5 +42,5 @@
 
 
 <?php
-	include('include/overall_foot.txt');
+	include('include/overall_foot.html');
 ?>
