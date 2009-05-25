@@ -34,6 +34,8 @@ $sort_days	= request_var('st', $default_sort_days);
 $sort_key	= request_var('sk', $default_sort_key);
 $sort_dir	= request_var('sd', $default_sort_dir);
 
+
+
 // Check if the user has actually sent a forum ID with his/her request
 // If not give them a nice error page.
 if (!$forum_id)
@@ -83,7 +85,7 @@ if (isset($_GET['e']) && !$user->data['is_registered'])
 // Permissions check
 if (!$auth->acl_gets('f_list', 'f_read', $forum_id) || ($forum_data['forum_type'] == FORUM_LINK && $forum_data['forum_link'] && !$auth->acl_get('f_read', $forum_id)))
 {
-	if ($user->data['user_id'] != ANONYMOUS)
+	if ($user->data['user_id'] != ANONYMOUSMOUS)
 	{
 		trigger_error('SORRY_AUTH_READ');
 	}
@@ -350,6 +352,7 @@ if ($user->data['is_registered'])
 	}
 }
 
+
 if ($forum_data['forum_type'] == FORUM_POST)
 {
 	// Obtain announcements ... removed sort ordering, sort by time in all cases
@@ -420,6 +423,8 @@ else
 }
 
 // Grab just the sorted topic ids
+// begin tag mod
+/*
 $sql = 'SELECT t.topic_id
 	FROM ' . TOPICS_TABLE . " t
 	WHERE $sql_where
@@ -427,6 +432,33 @@ $sql = 'SELECT t.topic_id
 		$sql_approved
 		$sql_limit_time
 	ORDER BY t.topic_type " . ((!$store_reverse) ? 'DESC' : 'ASC') . ', ' . $sql_sort_order;
+*/
+
+$tag_id		= request_var('tagid', 0);
+
+if ($tag_id == 0)
+{
+	$sql = 'SELECT t.topic_id
+	FROM ' . TOPICS_TABLE . " t
+	WHERE $sql_where
+		AND t.topic_type IN (" . POST_NORMAL . ', ' . POST_STICKY . ")
+		$sql_approved
+		$sql_limit_time
+	ORDER BY t.topic_type " . ((!$store_reverse) ? 'DESC' : 'ASC') . ', ' . $sql_sort_order;
+} 
+else 
+{
+	$sql = 'SELECT t.topic_id
+	FROM ' . TOPICS_TABLE . " t
+	JOIN " . TAG_TOPIC_TABLE . " ttt ON ttt.tag_id = $tag_id AND ttt.topic_id = t.topic_id
+	WHERE $sql_where
+		AND t.topic_type IN (" . POST_NORMAL . ', ' . POST_STICKY . ")
+		$sql_approved
+		$sql_limit_time
+	ORDER BY t.topic_type " . ((!$store_reverse) ? 'DESC' : 'ASC') . ', ' . $sql_sort_order;
+}
+// end tag mod
+
 $result = $db->sql_query_limit($sql, $sql_limit, $sql_start);
 
 while ($row = $db->sql_fetchrow($result))
@@ -445,7 +477,7 @@ if (sizeof($topic_list))
 		'SELECT'		=> $sql_array['SELECT'],
 		'FROM'			=> $sql_array['FROM'],
 		'LEFT_JOIN'		=> $sql_array['LEFT_JOIN'],
-
+	
 		'WHERE'			=> $db->sql_in_set('t.topic_id', $topic_list),
 	);
 

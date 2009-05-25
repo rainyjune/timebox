@@ -255,6 +255,8 @@ define('ZEBRA_TABLE',				$table_prefix . 'zebra');
 // Additional tables
 // begin tag mod 
 define('TAGS_TABLE',				$table_prefix . 'tags');
+define('TAG_TOPIC_TABLE',				$table_prefix . 'tag_topic');
+define('TAG_USER_TABLE',				$table_prefix . 'tag_user');
 // end tag mod
 
 ?>

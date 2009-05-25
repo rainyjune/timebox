@@ -1856,7 +1856,17 @@ function submit_post($mode, $subject, $username, $topic_type, &$poll, &$data, $u
 		);
 		unset($sql_data[TOPICS_TABLE]['sql']);
 	}
-
+	
+	// begin tag mod
+	// 如果是新建 topic 就插入标签数据到数据库
+	if ($post_mode == 'post' && (int) $data['f_tag_id'] != 0)
+	{
+		$sql = 'INSERT INTO ' . TAG_TOPIC_TABLE . ' values (' . $data['f_tag_id'] . ', ' . $data['topic_id'] . ')';
+		$db->sql_query($sql);
+	}
+	
+	// end tag mod
+		
 	// Submit new post
 	if ($post_mode == 'post' || $post_mode == 'reply')
 	{

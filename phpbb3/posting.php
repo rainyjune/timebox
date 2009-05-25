@@ -569,8 +569,8 @@ $solved_captcha = false;
 if ($submit || $preview || $refresh)
 {
 	// begin tag mod
-	//$tag
-	
+	$f_tag = request_var('f_tag', 0);
+	$post_data['f_tag_id']			= $f_tag;
 	// end tag mod
 	
 	$post_data['topic_cur_post_id']	= request_var('topic_cur_post_id', 0);
@@ -993,6 +993,10 @@ if ($submit || $preview || $refresh)
 				'attachment_data'		=> $message_parser->attachment_data,
 				'filename_data'			=> $message_parser->filename_data,
 
+				// begin tag mod
+				'f_tag_id'				=> (int) $post_data['f_tag_id'],
+				// end tag mod
+			
 				'topic_approved'		=> (isset($post_data['topic_approved'])) ? $post_data['topic_approved'] : false,
 				'post_approved'			=> (isset($post_data['post_approved'])) ? $post_data['post_approved'] : false,
 			);
