@@ -1,0 +1,33 @@
+<!-- INCLUDE mcp_header.html -->
+
+<h2>主题标签</h2>
+
+
+<div class="panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+			
+			<!-- BEGIN tags -->
+			<p class="linklist">
+			{tags.FORUM_NAME}<p />
+			<!-- IF tags.HAS_TAG -->
+				<!-- BEGIN val -->
+					<span>&nbsp;&nbsp;&nbsp;<a href="viewforum.php?f={tags.val.FORUM_ID}&tagid={tags.val.TAG_ID}">{tags.val.TAG_NAME}</a></span>
+					<!-- IF tags.MODERATOR --><a href="mcp.php?i=tags&mode=front&action=del&tag_id={tags.val.TAG_ID}&forum_id={tags.val.FORUM_ID}" title="delete"><img src="images/icons/misc/delete2.png" alt="delete it" /></a><!-- ENDIF -->
+				<!-- END val -->
+			<!-- ENDIF -->	
+			<!-- IF tags.MODERATOR -->
+				<form method="post" id="mcp" action="mcp.php?i=tags&mode=front&action=add">
+					<input id="forum_id" name="forum_id" type="hidden" value="{tags.FORUM_ID}">
+					</input><input id="tag_name" name="tag_name" style="width : 70px" type="text"></input>
+					<input type="submit" value="增加标签"></input>
+				</form>
+			<!-- ENDIF -->
+			</p>
+				<hr />
+			<!-- END tags -->
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+
+<br />
+
+<!-- INCLUDE mcp_footer.html -->

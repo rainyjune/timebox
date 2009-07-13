@@ -1276,6 +1276,23 @@ if ($solved_captcha !== false)
 $form_enctype = (@ini_get('file_uploads') == '0' || strtolower(@ini_get('file_uploads')) == 'off' || !$config['allow_attachments'] || !$auth->acl_get('u_attach') || !$auth->acl_get('f_attach', $forum_id)) ? '' : ' enctype="multipart/form-data"';
 add_form_key('posting');
 
+// begin tag mod
+// 我们在这里生成主题标签所需的模板变量
+// Grab tags
+$tags = $cache->obtain_tags($forum_id);
+foreach ($tags as $f_forum_id => $f_tags)
+{
+	$template->assign_var('S_SHOW_TAG', $f_forum_id && $mode == 'post' ? true : false);
+	foreach ($f_tags as $f_tag_id => $f_tag_name)
+	{
+		$template->assign_block_vars('tags', array(
+			'TAG_ID'	=> $f_tag_id,
+			'TAG_NAME'	=> $f_tag_name,
+		));
+	}
+}
+// end tag mod 
+
 
 // Start assigning vars for main posting page ...
 $template->assign_vars(array(
@@ -1337,10 +1354,7 @@ $template->assign_vars(array(
 	'S_BBCODE_QUOTE'		=> $quote_status,
 
 	'S_POST_ACTION'			=> $s_action,
-	'S_HIDDEN_FIELDS'		=> $s_hidden_fields,
-	// begin tag mod
-	'S_SHOW_TAG'			=> ($mode == 'post') ? true : false
-	//  end tag mod
+	'S_HIDDEN_FIELDS'		=> $s_hidden_fields
 	)
 );
 

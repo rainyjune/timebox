@@ -1253,6 +1253,14 @@ $template->assign_vars(array(
 	'S_NUM_POSTS' => sizeof($post_list))
 );
 
+// begin tag mod
+// 这里判断是不是精华贴
+$sql_string = 'select t.topic_id from phpbb_tag_topic t  where tag_id = 1 and topic_id = '.$topic_id;
+$result = $db->sql_query($sql_string);
+$db->sql_affectedrows() ? $is_jinghua = true : $is_jinghua = false;
+$db->sql_freeresult($result);
+// end tag mod
+
 // Output the posts
 $first_unread = $post_unread = false;
 for ($i = 0, $end = sizeof($post_list); $i < $end; ++$i)
@@ -1477,8 +1485,12 @@ for ($i = 0, $end = sizeof($post_list); $i < $end; ++$i)
 
 		'S_IGNORE_POST'		=> ($row['hide_post']) ? true : false,
 		'L_IGNORE_POST'		=> ($row['hide_post']) ? sprintf($user->lang['POST_BY_FOE'], get_username_string('full', $poster_id, $row['username'], $row['user_colour'], $row['post_username']), '<a href="' . $viewtopic_url . "&amp;p={$row['post_id']}&amp;view=show#p{$row['post_id']}" . '">', '</a>') : '',
+		// begin tag mod
+		'IS_MODERATOR'	=> $auth->acl_get('m_', $forum_id) ? true : false,
+		'IS_JINGHUA'		=> $is_jinghua,
+		// end tag mod
 	);
-
+	
 	if (isset($cp_row['row']) && sizeof($cp_row['row']))
 	{
 		$postrow = array_merge($postrow, $cp_row['row']);

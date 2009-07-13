@@ -85,7 +85,7 @@ if (isset($_GET['e']) && !$user->data['is_registered'])
 // Permissions check
 if (!$auth->acl_gets('f_list', 'f_read', $forum_id) || ($forum_data['forum_type'] == FORUM_LINK && $forum_data['forum_link'] && !$auth->acl_get('f_read', $forum_id)))
 {
-	if ($user->data['user_id'] != ANONYMOUSMOUS)
+	if ($user->data['user_id'] != ANONYMOUS)
 	{
 		trigger_error('SORRY_AUTH_READ');
 	}
@@ -563,6 +563,24 @@ $template->assign_vars(array(
 
 $topic_list = ($store_reverse) ? array_merge($announcement_list, array_reverse($topic_list)) : array_merge($announcement_list, $topic_list);
 $topic_tracking_info = $tracking_topics = array();
+
+// begin tag mod
+// 我们在这里生成主题标签所需的模板变量
+// Grab tags
+$tags = $cache->obtain_tags($forum_id);
+foreach ($tags as $f_forum_id => $f_tags)
+{
+	$template->assign_var('HAS_TAG', $f_forum_id ? true : false);
+	foreach ($f_tags as $f_tag_id => $f_tag_name)
+	{
+		$template->assign_block_vars('tags', array(
+			'TAG_ID'	=> $f_tag_id,
+			'TAG_NAME'	=> $f_tag_name,
+			'FORUM_ID'	=> $f_forum_id
+		));
+	}
+}
+// end tag mod 
 
 // Okay, lets dump out the page ...
 if (sizeof($topic_list))

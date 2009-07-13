@@ -435,25 +435,27 @@ class cache extends acm
 	/**
 	 * Obtain tags
 	 * tag mod
-	 * by phpbb@hellojineji.cn
+	 * by phpbb@hellojinjie.cn
 	 */
-	function botain_tags()
+	function obtain_tags($forum_id)
 	{
-		if (($tags = $this->get('_tags')) === false)
+		if (($tags = $this->get('_tags'."_$forum_id")) === false)
 		{
 			global $db;
 
-			$sql = 'SELECT * FROM ' . TAGS_TABLE . ' WHERE 	type = 2';
-			$result = $db->sql_query($sql);
+			$sql_string = 'select f.forum_id, t.id as tag_id, t.tag_name  
+								from phpbb_tags t join phpbb_forums f       
+								on t.forum_id = '.$forum_id.' and t.forum_id = f.forum_id';
+			$result = $db->sql_query($sql_string);
 			
 			$tags = array();
 			while ($row = $db->sql_fetchrow($result))
 			{
-				$tags[$row['forum_id']][$row['id']] = $row['name'];	
+				$tags[$row['forum_id']][$row['tag_id']] = $row['tag_name'];	
 			}
 			
 			$db->sql_freeresult();
-			$this->put('_tags', $tags);
+			$this->put('_tags'."_$forum_id", $tags);
 
 		}
 		

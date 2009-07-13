@@ -119,11 +119,10 @@
 		<ul class="topiclist">
 			<li class="row bg1">
 				<dl class="icon">
-					<dd class="posts"><a href="viewforum.php?f=2&tagid=1">随手写写</a></dd>
-					<dd class="posts"><a href="viewforum.php?f=2&tagid=2">上帝在笑</a></dd>
-					<dd class="posts"><a href="viewforum.php?f=2&tagid=3">吃饭去</a></dd>
-					<dd class="posts"><a href="viewforum.php?f=2&tagid=4">肚子饿了</a></dd>
-					<dd class="posts"><a href="viewforum.php?f=2&tagid=5">有人在发颠</a></dd>
+				<dd class="posts"><a href="viewforum.php?f={FORUM_ID}&tagid=1">本版精华</a></dd>
+				<!-- BEGIN tags -->
+					<dd class="posts"><a href="viewforum.php?f={tags.FORUM_ID}&tagid={tags.TAG_ID}">{tags.TAG_NAME}</a></dd>
+				<!-- END tags -->
 				</dl>
 			</li>
 		</ul>

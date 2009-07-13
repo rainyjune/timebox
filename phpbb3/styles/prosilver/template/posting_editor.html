@@ -104,8 +104,10 @@
 			<dt><label for="f_tag">主题标签 :</label></dt>
 			<!--  -->
 			<dd>
-			
-			<label for="f_tag-1"><input name="f_tag" id="f_tag-1" value="1" type="radio">随手写写</label> <label for="f_tag-5"><input name="f_tag" id="f_tag-5" value="2" type="radio">上帝的笑声</label> <label for="f_tag-6"><input name="f_tag" id="f_tag-6" value="3" type="radio">吃饭去</label> <label for="f_tag-4"><input name="f_tag" id="f_tag-4" value="4" type="radio">肚子饿了</label> <label for="f_tag-7"><input name="f_tag" id="f_tag-7" value="5" type="radio">有人在发颠</label></dd>
+			<!-- BEGIN tags -->
+				<label for="f_tag-{tags.TAG_ID}"><input name="f_tag" id="f_tag-{tags.TAG_ID}" value="{tags.TAG_ID}" type="radio">{tags.TAG_NAME}</label> 
+			<!-- END tags -->
+			</dd>
 
 			<!--  -->
 		</dl>
