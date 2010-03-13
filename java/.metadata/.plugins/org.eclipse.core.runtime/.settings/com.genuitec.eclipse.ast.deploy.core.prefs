@@ -1,0 +1,13 @@
+#Sat Mar 13 21:08:22 CST 2010
+tomcat6Server.struts1.shouldOverwrite=false
+tomcat6Server.struts1.contextRoot=/struts1
+tomcat6Server.struts1.deployIsOverProject=false
+tomcat6Server.struts1.isUptoDate=true
+tomcat6Server.struts1.isExploded=true
+tomcat6Server.struts1.IEARProjectName=
+tomcat6Server.struts1.shouldBackup=false
+tomcat6Server.struts1.deploymentPath=/opt/apache-tomcat-6.0.18/webapps/struts1
+tomcat6Server.struts1.type=WebDeployment
+tomcat6Server.struts1.altContextRoot=
+eclipse.preferences.version=1
+tomcat6Server.struts1.isDeployed=true

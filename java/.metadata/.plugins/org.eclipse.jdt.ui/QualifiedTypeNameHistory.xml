@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.hibernate.cfg.Configuration"/>
+<fullyQualifiedTypeName name="org.hibernate.Session"/>
+<fullyQualifiedTypeName name="org.hibernate.annotations.Entity"/>
+<fullyQualifiedTypeName name="org.hibernate.annotations.Index"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
+<fullyQualifiedTypeName name="org.hibernate.cfg.AnnotationConfiguration"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="org.phprpc.PHPRPC_Client"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="org.apache.lucene.analysis.cn.smart.hhmm.HHMMSegmenter"/>
+<fullyQualifiedTypeName name="java.io.FileFilter"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
+<fullyQualifiedTypeName name="org.apache.lucene.document.Field.Store"/>
+<fullyQualifiedTypeName name="org.apache.lucene.document.Field.Index"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+<fullyQualifiedTypeName name="org.apache.lucene.search.IndexSearcher"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="com.webbookstore.bean.Book"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.apache.lucene.document.Field"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="org.apache.lucene.search.Query"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
+<fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
+<fullyQualifiedTypeName name="org.apache.lucene.queryParser.ParseException"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="javax.sql.DataSource"/>
+<fullyQualifiedTypeName name="org.apache.lucene.util.Version"/>
+<fullyQualifiedTypeName name="org.apache.lucene.document.Document"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="org.apache.lucene.analysis.cn.smart.SmartChineseAnalyzer"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.webbookstore.service.BookService"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="org.apache.struts.action.ActionMapping"/>
+<fullyQualifiedTypeName name="org.apache.struts.action.ActionForward"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.commons.logging.LogFactory"/>
+<fullyQualifiedTypeName name="org.apache.commons.logging.Log"/>
+<fullyQualifiedTypeName name="org.apache.commons.logging.LogFactory"/>
+<fullyQualifiedTypeName name="org.apache.commons.beanutils.BeanUtils"/>
+</qualifiedTypeNameHistroy>

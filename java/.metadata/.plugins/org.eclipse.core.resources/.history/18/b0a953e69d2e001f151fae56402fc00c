@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:bean="http://www.springframework.org/schema/beans"
+	xmlns="http://www.springframework.org/schema/security"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+				http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+              http://www.springframework.org/schema/security 
+              http://www.springframework.org/schema/security/spring-security-2.0.4.xsd"> 
+
+
+
+	<s:http auto-config="true">
+		<s:intercept-url pattern="/u*" access="ROLE_USER" />
+		<s:form-login login-page="/login.jsp" />
+		<s:anonymous />
+
+		<s:logout />
+		<s:remember-me />
+
+	</s:http>
+
+	<s:authentication-provider>
+		<s:user-service>
+			<s:user name="jin" password="jin" authorities="ROLE_USER, ROLE_ADMIN" />
+			<s:user name="jie" password="jie" authorities="ROLE_USER" />
+		</s:user-service>
+	</s:authentication-provider>
+
+
+
+</beans>

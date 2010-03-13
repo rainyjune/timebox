@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.genuitec.eclipse.wdt.jsp.debug.localServer">
+<booleanAttribute key="IS_LAUNCH_CONFIG_SERVER_TYPE" value="false"/>
+<stringAttribute key="LAUNCH_IS_TEMPORARY" value="false"/>
+<stringAttribute key="SERVER_BUNDLE_NAME_ATTR" value="com.genuitec.eclipse.easie.tomcat6"/>
+<stringAttribute key="SERVER_CLASS_NAME_ATTR" value="com.genuitec.eclipse.easie.tomcat6.Tomcat6"/>
+<stringAttribute key="SERVER_ICON_PATH" value="platform:/plugin/com.genuitec.eclipse.easie.tomcat_8.0.0.me200911090405/icons/tomcat_logo.gif"/>
+<stringAttribute key="SERVER_TYPE_ID" value="Tomcat  6:x"/>
+<stringAttribute key="SERVER_TYPE_NAME" value="Tomcat  6.x"/>
+<listAttribute key="org.eclipse.jdt.launching.CLASSPATH">
+<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;runtimeClasspathEntry externalArchive=&quot;/opt/apache-tomcat-6.0.18/bin/bootstrap.jar&quot; path=&quot;3&quot; type=&quot;2&quot;/&gt;&#10;"/>
+<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;runtimeClasspathEntry externalArchive=&quot;/usr/lib/jvm/java-6-sun-1.6.0.15/lib/tools.jar&quot; path=&quot;3&quot; type=&quot;2&quot;/&gt;&#10;"/>
+<listEntry value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;runtimeClasspathEntry containerPath=&quot;org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/java-6-sun-1.6.0.15&quot; path=&quot;1&quot; type=&quot;4&quot;/&gt;&#10;"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="false"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.apache.catalina.startup.Bootstrap"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="start"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dcatalina.home=/opt/apache-tomcat-6.0.18 -Dcatalina.base=/opt/apache-tomcat-6.0.18 -Djava.endorsed.dirs=/opt/apache-tomcat-6.0.18/common/endorsed -Djava.io.tmpdir=/opt/apache-tomcat-6.0.18/temp -Djava.library.path=/usr/lib/jvm/java-6-sun-1.6.0.15/bin:&quot;/opt/apache-tomcat-6.0.18/bin&quot; -Dsun.io.useCanonCaches=false"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_INSTALL_NAME" value="java-6-sun-1.6.0.15"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_INSTALL_TYPE_ID" value="org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType"/>
+<stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="/opt/apache-tomcat-6.0.18/bin"/>
+</launchConfiguration>

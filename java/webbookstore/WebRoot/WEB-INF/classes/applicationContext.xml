@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:aop="http://www.springframework.org/schema/aop"
+		xmlns:tx="http://www.springframework.org/schema/tx"
+		xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	
+	<!-- 2. 配置Spring-Hibernate模式：开始 -->
+	
+	<!-- 2.1 配置数据库连接池：使用Apache的dbcp -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306/bookstore"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="jinjie"></property>
+		<property name="maxActive" value="100"></property>
+		<property name="maxIdle" value="30"></property>
+		<property name="maxWait" value="500"></property>
+		<property name="defaultAutoCommit" value="true"></property>
+	</bean>
+	
+	<!-- 2.2 将连接池注入到Spring的SessionFactory中 -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>		
+				<prop key="hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<!--  <value>com/user/pojo/User.hbm.xml</value> -->
+				<value>com/webbookstore/bean/User.hbm.xml</value>
+				<value>com/webbookstore/bean/Orders.hbm.xml</value>
+				<value>com/webbookstore/bean/OrderItem.hbm.xml</value>
+				<value>com/webbookstore/bean/Catalog.hbm.xml</value>
+				<value>com/webbookstore/bean/Book.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- 2.1 配置SessionFactory，将Hibernate的SessionFactory的创建交给Spring容器来管理 -->
+	<!--  
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="configLocation">
+			<value>classpath:hibernate.cfg.xml</value>
+		</property>
+	</bean>
+	-->
+	
+	<!-- 配置公用的BaseDAO，其它数据持久层可以采用继承或运行时注入的方式使用该基类 -->
+	<bean id="baseDAO"
+		class="com.webbookstore.util.BaseDAO">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- 2.3 配置事务管理器 -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- 2.4 配置事务传播特性 -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="save*" propagation="REQUIRED"/>
+			<tx:method name="delete*" propagation="REQUIRED"/>
+			<tx:method name="update*" propagation="REQUIRED"/>
+			<tx:method name="*" read-only="true"/>
+		</tx:attributes>
+	</tx:advice>
+	
+	<!-- 2.5 给指定的方法添加事务 -->
+	<aop:config>
+		<aop:advisor pointcut="execution(* com.webbookstore.service.*.*(..))" advice-ref="txAdvice"/>
+	</aop:config>
+	
+	<!-- 配置Spring-Hibernate模式：结束，成功！！！ -->
+</beans>

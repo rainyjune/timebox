@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_j1JdAS6nEd-6Td7GghInYw">
+  <name xsi:nil="true"/>
+  <elementImport xmi:id="_ktvR4C6nEd-6Td7GghInYw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_kxFg0C6nEd-6Td7GghInYw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <elementImport xmi:id="_kyqOIC6nEd-6Td7GghInYw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+  </elementImport>
+  <elementImport xmi:id="_kzLykC6nEd-6Td7GghInYw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+  </elementImport>
+  <elementImport xmi:id="_kzR5MC6nEd-6Td7GghInYw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+  </elementImport>
+  <elementImport xmi:id="_k0HmsC6nEd-6Td7GghInYw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+  </elementImport>
+  <elementImport xmi:id="_k0TM4C6nEd-6Td7GghInYw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+  </elementImport>
+  <elementImport xmi:id="_k0faIC6nEd-6Td7GghInYw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+  </elementImport>
+  <elementImport xmi:id="_k0nV8C6nEd-6Td7GghInYw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+  </elementImport>
+  <elementImport xmi:id="_k0xG8C6nEd-6Td7GghInYw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+  </elementImport>
+  <elementImport xmi:id="_k0_JYC6nEd-6Td7GghInYw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+  </elementImport>
+  <elementImport xmi:id="_k1SrYC6nEd-6Td7GghInYw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_k1dqgC6nEd-6Td7GghInYw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_kJVkUC6nEd-6Td7GghInYw" name="jaunty">
+    <packagedElement xmi:type="uml:Package" xmi:id="_kKD9EC6nEd-6Td7GghInYw" name="struts">
+      <packagedElement xmi:type="uml:Package" xmi:id="_kKD9ES6nEd-6Td7GghInYw" name="orm">
+        <packagedElement xmi:type="uml:Class" xmi:id="_kLKwUC6nEd-6Td7GghInYw" name="HibernateSessionFactory">
+          <ownedComment xmi:id="_kMLc8C6nEd-6Td7GghInYw">
+            <body>/** 
+ * Configures and provides access to Hibernate sessions, tied to the
+ * current thread of execution.  Follows the Thread Local Session
+ * pattern, see {@link http://hibernate.org/42.html }.
+ */
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_kt4b0C6nEd-6Td7GghInYw" name="CONFIG_FILE_LOCATION" visibility="private" isStatic="true">
+            <ownedComment xmi:id="_kt_wkC6nEd-6Td7GghInYw">
+              <body>/** 
+ * Location of hibernate.cfg.xml file.
+ * Location should be on the classpath as Hibernate uses  
+ * #resourceAsStream style lookup for its configuration file. 
+ * The default classpath location of the hibernate config file is 
+ * in the default package. Use #setConfigFile() to update 
+ * the location of the configuration file for the current session.   
+ */
+</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_kt4b0S6nEd-6Td7GghInYw" value="/hibernate.cfg.xml"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_kuccgC6nEd-6Td7GghInYw" name="threadLocal" visibility="private" isStatic="true" type="_kuWV4C6nEd-6Td7GghInYw" isReadOnly="true"/>
+          <ownedAttribute xmi:id="_kuopwC6nEd-6Td7GghInYw" name="configuration" visibility="private" isStatic="true" type="_khWbsS6nEd-6Td7GghInYw"/>
+          <ownedAttribute xmi:id="_ku-oAC6nEd-6Td7GghInYw" name="sessionFactory" visibility="private" isStatic="true" type="_ku0P8C6nEd-6Td7GghInYw"/>
+          <ownedAttribute xmi:id="_kvT_MC6nEd-6Td7GghInYw" name="configFile" visibility="private" isStatic="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_kwH3gC6nEd-6Td7GghInYw" name="getSession" visibility="public" isStatic="true">
+            <ownedComment xmi:id="_kwPzUC6nEd-6Td7GghInYw">
+              <body>/** 
+ * Returns the ThreadLocal Session instance.  Lazy initialize
+ * the &lt;code>SessionFactory&lt;/code> if needed.
+ * @return Session
+ * @throws HibernateException
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_kwH3gS6nEd-6Td7GghInYw" name="return" type="_khV0oC6nEd-6Td7GghInYw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_kwRBcC6nEd-6Td7GghInYw" name="rebuildSessionFactory" visibility="public" isStatic="true">
+            <ownedComment xmi:id="_kwaLYC6nEd-6Td7GghInYw">
+              <body>/** 
+ * Rebuild hibernate session factory
+ */
+</body>
+            </ownedComment>
+          </ownedOperation>
+          <ownedOperation xmi:id="_kwbZgC6nEd-6Td7GghInYw" name="closeSession" visibility="public" isStatic="true">
+            <ownedComment xmi:id="_kwfq8C6nEd-6Td7GghInYw">
+              <body>/** 
+ * Close the single hibernate session instance.
+ * @throws HibernateException
+ */
+</body>
+            </ownedComment>
+          </ownedOperation>
+          <ownedOperation xmi:id="_kwlKgC6nEd-6Td7GghInYw" name="getSessionFactory" visibility="public" isStatic="true">
+            <ownedComment xmi:id="_kwrRIC6nEd-6Td7GghInYw">
+              <body>/** 
+ * return session factory
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_kwlKgS6nEd-6Td7GghInYw" name="return" type="_ku0P8C6nEd-6Td7GghInYw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_kwzM8C6nEd-6Td7GghInYw" name="setConfigFile" visibility="public" isStatic="true">
+            <ownedComment xmi:id="_kw4sgC6nEd-6Td7GghInYw">
+              <body>/** 
+ * return session factory
+ * session factory will be rebuilded in the next call
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_kwzM8S6nEd-6Td7GghInYw" name="configFile">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_kw56oC6nEd-6Td7GghInYw" name="getConfiguration" visibility="public" isStatic="true">
+            <ownedComment xmi:id="_kxCdgC6nEd-6Td7GghInYw">
+              <body>/** 
+ * return hibernate configuration
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_kw56oS6nEd-6Td7GghInYw" name="return" type="_khWbsS6nEd-6Td7GghInYw" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_kMMrEC6nEd-6Td7GghInYw" name="AbstractSecurityRole" isAbstract="true">
+          <ownedComment xmi:id="_kMaGcC6nEd-6Td7GghInYw">
+            <body>/** 
+ * AbstractSecurityRole entity provides the base persistence definition of the
+ * SecurityRole entity. @author MyEclipse Persistence Tools
+ */
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_kxIkIC6nEd-6Td7GghInYw" name="roleId" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_kxS8MC6nEd-6Td7GghInYw" name="roleName" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_kyLtAC6nEd-6Td7GghInYw" name="getRoleId" visibility="public">
+            <ownedParameter xmi:id="_kyLtAS6nEd-6Td7GghInYw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_kyYhUC6nEd-6Td7GghInYw" name="setRoleId" visibility="public">
+            <ownedParameter xmi:id="_kyYhUS6nEd-6Td7GghInYw" name="roleId">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_kyen8C6nEd-6Td7GghInYw" name="getRoleName" visibility="public">
+            <ownedParameter xmi:id="_kyen8S6nEd-6Td7GghInYw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_kyhEMC6nEd-6Td7GghInYw" name="setRoleName" visibility="public">
+            <ownedParameter xmi:id="_kyhEMS6nEd-6Td7GghInYw" name="roleName">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_kMatgC6nEd-6Td7GghInYw" name="AbstractSecurityUser" isAbstract="true">
+          <ownedComment xmi:id="_kMb7oC6nEd-6Td7GghInYw">
+            <body>/** 
+ * AbstractSecurityUser entity provides the base persistence definition of the
+ * SecurityUser entity. @author MyEclipse Persistence Tools
+ */
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_ky0mMC6nEd-6Td7GghInYw" name="userId" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_ky-XMC6nEd-6Td7GghInYw" name="username" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_kzD2wC6nEd-6Td7GghInYw" name="password" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_kzLykS6nEd-6Td7GghInYw" name="getUserId" visibility="public">
+            <ownedParameter xmi:id="_kzLyki6nEd-6Td7GghInYw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_kzTHUC6nEd-6Td7GghInYw" name="setUserId" visibility="public">
+            <ownedParameter xmi:id="_kzTHUS6nEd-6Td7GghInYw" name="userId">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_kzYm4C6nEd-6Td7GghInYw" name="getUsername" visibility="public">
+            <ownedParameter xmi:id="_kzYm4S6nEd-6Td7GghInYw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_kzetgC6nEd-6Td7GghInYw" name="setUsername" visibility="public">
+            <ownedParameter xmi:id="_kzetgS6nEd-6Td7GghInYw" name="username">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_kzjmAC6nEd-6Td7GghInYw" name="getPassword" visibility="public">
+            <ownedParameter xmi:id="_kzjmAS6nEd-6Td7GghInYw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_kzrh0C6nEd-6Td7GghInYw" name="setPassword" visibility="public">
+            <ownedParameter xmi:id="_kzrh0S6nEd-6Td7GghInYw" name="password">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_kMcisC6nEd-6Td7GghInYw" name="AbstractSecurityUserRole" isAbstract="true">
+          <ownedComment xmi:id="_kMnh0C6nEd-6Td7GghInYw">
+            <body>/** 
+ * AbstractSecurityUserRole entity provides the base persistence definition of
+ * the SecurityUserRole entity. @author MyEclipse Persistence Tools
+ */
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_kz0rwC6nEd-6Td7GghInYw" name="id" visibility="private" type="_kNRCEC6nEd-6Td7GghInYw" association="_k-j8IC6nEd-6Td7GghInYw"/>
+          <ownedOperation xmi:id="_kz2g8C6nEd-6Td7GghInYw" name="getId" visibility="public">
+            <ownedParameter xmi:id="_kz2g8S6nEd-6Td7GghInYw" name="return" type="_kNRCEC6nEd-6Td7GghInYw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_kz91sC6nEd-6Td7GghInYw" name="setId" visibility="public">
+            <ownedParameter xmi:id="_kz91sS6nEd-6Td7GghInYw" name="id" type="_kNRCEC6nEd-6Td7GghInYw"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_kMoI4C6nEd-6Td7GghInYw" name="AbstractSecurityUserRoleId" isAbstract="true">
+          <ownedComment xmi:id="_kM4AgC6nEd-6Td7GghInYw">
+            <body>/** 
+ * AbstractSecurityUserRoleId entity provides the base persistence definition of
+ * the SecurityUserRoleId entity. @author MyEclipse Persistence Tools
+ */
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_k0KqAC6nEd-6Td7GghInYw" name="userId" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_k0XeUC6nEd-6Td7GghInYw" name="roleId" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_k0gBMC6nEd-6Td7GghInYw" name="getUserId" visibility="public">
+            <ownedParameter xmi:id="_k0gBMS6nEd-6Td7GghInYw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_k0nV8S6nEd-6Td7GghInYw" name="setUserId" visibility="public">
+            <ownedParameter xmi:id="_k0nV8i6nEd-6Td7GghInYw" name="userId">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_k0xG8S6nEd-6Td7GghInYw" name="getRoleId" visibility="public">
+            <ownedParameter xmi:id="_k0xG8i6nEd-6Td7GghInYw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_k1Eo8C6nEd-6Td7GghInYw" name="setRoleId" visibility="public">
+            <ownedParameter xmi:id="_k1Eo8S6nEd-6Td7GghInYw" name="roleId">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_k1SrYS6nEd-6Td7GghInYw" name="equals" visibility="public">
+            <ownedParameter xmi:id="_k1SrYi6nEd-6Td7GghInYw" name="other" type="_k1SEUC6nEd-6Td7GghInYw"/>
+            <ownedParameter xmi:id="_k1SrYy6nEd-6Td7GghInYw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_k1dqgS6nEd-6Td7GghInYw" name="hashCode" visibility="public">
+            <ownedParameter xmi:id="_k1dqgi6nEd-6Td7GghInYw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_kM4AgS6nEd-6Td7GghInYw" name="SecurityRole">
+          <ownedComment xmi:id="_kM5OoC6nEd-6Td7GghInYw">
+            <body>/** 
+ * SecurityRole entity. @author MyEclipse Persistence Tools
+ */
+</body>
+          </ownedComment>
+          <generalization xmi:id="_k1mNYC6nEd-6Td7GghInYw" general="_kMMrEC6nEd-6Td7GghInYw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_kM51sC6nEd-6Td7GghInYw" name="SecurityUser">
+          <ownedComment xmi:id="_kNHREC6nEd-6Td7GghInYw">
+            <body>/** 
+ * SecurityUser entity. @author MyEclipse Persistence Tools
+ */
+</body>
+          </ownedComment>
+          <generalization xmi:id="_k1m0cC6nEd-6Td7GghInYw" general="_kMatgC6nEd-6Td7GghInYw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_kNHRES6nEd-6Td7GghInYw" name="SecurityUserRole">
+          <ownedComment xmi:id="_kNJGQC6nEd-6Td7GghInYw">
+            <body>/** 
+ * SecurityUserRole entity. @author MyEclipse Persistence Tools
+ */
+</body>
+          </ownedComment>
+          <generalization xmi:id="_k1nbgC6nEd-6Td7GghInYw" general="_kMcisC6nEd-6Td7GghInYw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_kNRCEC6nEd-6Td7GghInYw" name="SecurityUserRoleId">
+          <ownedComment xmi:id="_kNS3QC6nEd-6Td7GghInYw">
+            <body>/** 
+ * SecurityUserRoleId entity. @author MyEclipse Persistence Tools
+ */
+</body>
+          </ownedComment>
+          <generalization xmi:id="_k1oCkC6nEd-6Td7GghInYw" general="_kMoI4C6nEd-6Td7GghInYw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_k-j8IC6nEd-6Td7GghInYw" memberEnd="_kz0rwC6nEd-6Td7GghInYw _k-j8IS6nEd-6Td7GghInYw">
+          <ownedEnd xmi:id="_k-j8IS6nEd-6Td7GghInYw" name="AbstractSecurityUserRole" type="_kMcisC6nEd-6Td7GghInYw" association="_k-j8IC6nEd-6Td7GghInYw"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_kNTeUC6nEd-6Td7GghInYw" name="struts1">
+      <packagedElement xmi:type="uml:Package" xmi:id="_kNVTgC6nEd-6Td7GghInYw" name="action">
+        <packagedElement xmi:type="uml:Class" xmi:id="_kNcoQC6nEd-6Td7GghInYw" name="SayHelloAction">
+          <generalization xmi:id="_k1tiIC6nEd-6Td7GghInYw" general="_khXp1S6nEd-6Td7GghInYw"/>
+          <ownedOperation xmi:id="_k1wlcC6nEd-6Td7GghInYw" name="execute" visibility="public">
+            <ownedParameter xmi:id="_k1wlcS6nEd-6Td7GghInYw" name="actionMapping" type="_khYQ4i6nEd-6Td7GghInYw"/>
+            <ownedParameter xmi:id="_k1wlci6nEd-6Td7GghInYw" name="actionForm" type="_khYQ4C6nEd-6Td7GghInYw"/>
+            <ownedParameter xmi:id="_k1wlcy6nEd-6Td7GghInYw" name="request" type="_khXp0C6nEd-6Td7GghInYw"/>
+            <ownedParameter xmi:id="_k1wldC6nEd-6Td7GghInYw" name="response" type="_khXp0S6nEd-6Td7GghInYw"/>
+            <ownedParameter xmi:id="_k1wldS6nEd-6Td7GghInYw" name="return" type="_khYQ4S6nEd-6Td7GghInYw" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_kNiH0C6nEd-6Td7GghInYw" name="SayHelloSubmitAction">
+          <generalization xmi:id="_k12FAC6nEd-6Td7GghInYw" general="_khXp1S6nEd-6Td7GghInYw"/>
+          <ownedAttribute xmi:id="_k136MC6nEd-6Td7GghInYw" name="log" visibility="private" isStatic="true" type="_khqkwC6nEd-6Td7GghInYw" isReadOnly="true"/>
+          <ownedOperation xmi:id="_k1-A0C6nEd-6Td7GghInYw" name="execute" visibility="public">
+            <ownedParameter xmi:id="_k1-A0S6nEd-6Td7GghInYw" name="actionMapping" type="_khYQ4i6nEd-6Td7GghInYw"/>
+            <ownedParameter xmi:id="_k1-A0i6nEd-6Td7GghInYw" name="actionForm" type="_khYQ4C6nEd-6Td7GghInYw"/>
+            <ownedParameter xmi:id="_k1-A0y6nEd-6Td7GghInYw" name="request" type="_khXp0C6nEd-6Td7GghInYw"/>
+            <ownedParameter xmi:id="_k1-A1C6nEd-6Td7GghInYw" name="response" type="_khXp0S6nEd-6Td7GghInYw"/>
+            <ownedParameter xmi:id="_k1-A1S6nEd-6Td7GghInYw" name="return" type="_khYQ4S6nEd-6Td7GghInYw" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_kNlLIC6nEd-6Td7GghInYw" name="form">
+        <packagedElement xmi:type="uml:Class" xmi:id="_kNrRwC6nEd-6Td7GghInYw" name="HelloForm">
+          <ownedComment xmi:id="_kRCHwC6nEd-6Td7GghInYw">
+            <body>/** 
+ * MyEclipse Struts
+ * Creation date: 03-11-2010
+ * XDoclet definition:
+ * @struts.form name=&quot;HelloForm&quot;
+ */
+</body>
+          </ownedComment>
+          <generalization xmi:id="_k2DgYC6nEd-6Td7GghInYw" general="_kh1j4C6nEd-6Td7GghInYw"/>
+          <ownedAttribute xmi:id="_k2HKwC6nEd-6Td7GghInYw" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_k2NRYC6nEd-6Td7GghInYw" name="message" visibility="private">
+            <ownedComment xmi:id="_k2TYAC6nEd-6Td7GghInYw">
+              <body>/** 
+ * message property 
+ */
+</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_k2ZeoC6nEd-6Td7GghInYw" name="year" visibility="private">
+            <ownedComment xmi:id="_k2iBgC6nEd-6Td7GghInYw">
+              <body>/** 
+ * year property 
+ */
+</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_k2jPoC6nEd-6Td7GghInYw" name="getMessage" visibility="public">
+            <ownedComment xmi:id="_k2rLcC6nEd-6Td7GghInYw">
+              <body>/** 
+ * Returns the message.
+ * @return String
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_k2j2sC6nEd-6Td7GghInYw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_k2rygC6nEd-6Td7GghInYw" name="setMessage" visibility="public">
+            <ownedComment xmi:id="_k20VYC6nEd-6Td7GghInYw">
+              <body>/** 
+ * Set the message.
+ * @param message The message to set
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_k2rygS6nEd-6Td7GghInYw" name="message">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_k21jgC6nEd-6Td7GghInYw" name="getYear" visibility="public">
+            <ownedComment xmi:id="_k24m0C6nEd-6Td7GghInYw">
+              <body>/** 
+ * Returns the year.
+ * @return Integer
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_k21jgS6nEd-6Td7GghInYw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_k25N4C6nEd-6Td7GghInYw" name="setYear" visibility="public">
+            <ownedComment xmi:id="_k26cAC6nEd-6Td7GghInYw">
+              <body>/** 
+ * Set the year.
+ * @param year The year to set
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_k25N4S6nEd-6Td7GghInYw" name="year">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_kg8zEC6nEd-6Td7GghInYw" name="org">
+    <packagedElement xmi:type="uml:Package" xmi:id="_kg9aIC6nEd-6Td7GghInYw" name="hibernate">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_khLckC6nEd-6Td7GghInYw" name="HibernateException"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_khV0oC6nEd-6Td7GghInYw" name="Session"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_khWbsC6nEd-6Td7GghInYw" name="cfg">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_khWbsS6nEd-6Td7GghInYw" name="Configuration"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_ku0P8C6nEd-6Td7GghInYw" name="SessionFactory"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_khXp0i6nEd-6Td7GghInYw" name="apache">
+      <packagedElement xmi:type="uml:Package" xmi:id="_khXp0y6nEd-6Td7GghInYw" name="struts">
+        <packagedElement xmi:type="uml:Package" xmi:id="_khXp1C6nEd-6Td7GghInYw" name="action">
+          <packagedElement xmi:type="uml:DataType" xmi:id="_khXp1S6nEd-6Td7GghInYw" name="Action"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_khYQ4C6nEd-6Td7GghInYw" name="ActionForm"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_khYQ4S6nEd-6Td7GghInYw" name="ActionForward"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_khYQ4i6nEd-6Td7GghInYw" name="ActionMapping"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_kh080C6nEd-6Td7GghInYw" name="validator">
+          <packagedElement xmi:type="uml:DataType" xmi:id="_kh1j4C6nEd-6Td7GghInYw" name="ValidatorForm"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_khovkS6nEd-6Td7GghInYw" name="commons">
+        <packagedElement xmi:type="uml:Package" xmi:id="_khovki6nEd-6Td7GghInYw" name="beanutils">
+          <packagedElement xmi:type="uml:DataType" xmi:id="_khovky6nEd-6Td7GghInYw" name="BeanUtils"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_khpWoC6nEd-6Td7GghInYw" name="logging">
+          <packagedElement xmi:type="uml:DataType" xmi:id="_khqkwC6nEd-6Td7GghInYw" name="Log"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_khqkwS6nEd-6Td7GghInYw" name="LogFactory"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_khXCwC6nEd-6Td7GghInYw" name="javax">
+    <packagedElement xmi:type="uml:Package" xmi:id="_khXCwS6nEd-6Td7GghInYw" name="servlet">
+      <packagedElement xmi:type="uml:Package" xmi:id="_khXCwi6nEd-6Td7GghInYw" name="http">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_khXp0C6nEd-6Td7GghInYw" name="HttpServletRequest"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_khXp0S6nEd-6Td7GghInYw" name="HttpServletResponse"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_khnhcC6nEd-6Td7GghInYw" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_khoIgC6nEd-6Td7GghInYw" name="lang">
+      <packagedElement xmi:type="uml:Package" xmi:id="_khoIgS6nEd-6Td7GghInYw" name="reflect">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_khovkC6nEd-6Td7GghInYw" name="InvocationTargetException"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_kuWV4C6nEd-6Td7GghInYw" name="ThreadLocal&lt;Session>"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_k1SEUC6nEd-6Td7GghInYw" name="Object"/>
+</uml:Model>

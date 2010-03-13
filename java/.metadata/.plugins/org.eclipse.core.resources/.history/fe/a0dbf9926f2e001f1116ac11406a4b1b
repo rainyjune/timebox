@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/welcome.do" location="50,50" dimension="290,108" />
+  <StrutsActivity path="/sayHello.do" location="650,50" dimension="382,108" />
+  <StrutsActivity path="/jsp/say_hello.jsp" />
+  <StrutsTransition id="/sayHello.do,form,/jsp/say_hello.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="841,104" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

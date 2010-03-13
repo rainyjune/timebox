@@ -1,0 +1,7 @@
+package jaunty.servlet;
+
+import java.io.Serializable;
+
+public class SearchResult implements Serializable {
+
+}

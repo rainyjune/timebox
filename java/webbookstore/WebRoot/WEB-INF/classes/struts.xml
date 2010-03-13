@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    
+<struts>
+
+	<package name="webbookstore" extends="struts-default">
+		<!-- 注册用户 -->
+		<action name="register" class="userAction" method="register">
+			<result name="success">/register_success.jsp</result>
+		</action>
+		<!-- 退出用户 -->
+		<action name="logout" class="userAction" method="logout">
+			<result name="success" type="redirect">index.jsp</result>
+		</action>
+		<!-- 用户登录的处理 -->
+		<action name="login" class="userAction">
+			<result name="success">/login_success.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		<!-- 显示图书分类列表 -->
+		<action name="browseCatalog" class="bookAction" method="browseCatalog">
+			<result name="success">/jspView/browserCatalog.jsp</result>
+		</action>
+		<!-- 显示指定图书分类的图书详细信息 -->
+		<action name="browseBooks" class="bookAction" method="browseBooks">
+			<result name="success">/jspView/browserBooks.jsp</result>
+		</action>
+		<!-- 显示图书搜索界面 -->
+		<action name="viewBooksQuery" class="bookAction" method="viewBooksQuery">
+			<result name="success">/jspView/query.jsp</result>
+		</action>
+		<!-- 查询书本信息 -->
+		<action name="queryBooks" class="bookAction" method="getBooks">
+			<result name="success">/jspView/query_success.jsp</result>
+		</action>
+		<!-- 加入购物车 -->
+		<action name="addToCart" class="shopAction" method="addToCart">
+			<result name="success">/jspView/addtocart_success.jsp</result>
+		</action>
+		<!-- 更新购物车 -->
+		<action name="updateToCart" class="shopAction" method="updateToCart">
+			<result name="success">/jspView/showCart.jsp</result>
+		</action>
+		<!-- 显示购物车 -->
+		<action name="viewCart" class="shopAction">
+			<result name="success">/jspView/showCart.jsp</result>
+		</action>
+		<!-- 结帐 -->
+		<action name="checkout" class="shopAction" method="checkout">
+			<result name="success">/jspView/checkout_success.jsp</result>
+		</action>
+	</package>
+
+</struts>

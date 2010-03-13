@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Layout resource="/struts1/WebRoot/WEB-INF/struts-bean.tld">
+ <TreeFormPage>
+  <Memento type="FileTLD_PRO">
+   <Memento type="Tag Library Description"/>
+   <Memento type="Defined Tags"/>
+  </Memento>
+ </TreeFormPage>
+</Layout>

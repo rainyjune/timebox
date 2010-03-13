@@ -1,0 +1,22 @@
+package jaunty.struts.orm;
+
+
+
+/**
+ * SecurityUserRoleId entity. @author MyEclipse Persistence Tools
+ */
+public class SecurityUserRoleId extends AbstractSecurityUserRoleId implements java.io.Serializable {
+
+    // Constructors
+
+    /** default constructor */
+    public SecurityUserRoleId() {
+    }
+
+    
+    /** full constructor */
+    public SecurityUserRoleId(Long userId, Long roleId) {
+        super(userId, roleId);        
+    }
+   
+}

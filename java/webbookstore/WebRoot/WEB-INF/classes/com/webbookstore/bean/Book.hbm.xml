@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.webbookstore.bean.Book" table="book">
+		<id name="bookId" type="java.lang.Integer">
+			<column name="book_id_"/>
+			<generator class="native"/>
+		</id>
+		
+		<many-to-one name="catalog" class="com.webbookstore.bean.Catalog">
+			<column name="catalog_id_"/>
+		</many-to-one>
+		
+		<property name="bookName" column="book_name_" type="java.lang.String"/>
+		
+		<property name="price" column="price_" type="java.lang.Integer"/>
+		
+		<property name="picture" column="picture_" type="java.lang.String"/>
+	</class>
+
+</hibernate-mapping>

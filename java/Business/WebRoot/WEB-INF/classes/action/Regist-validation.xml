@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+        "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+        "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+<validators>
+	<field name="user.name">
+		<field-validator type="requiredstring" short-circuit="true">
+			<param name="trim">true</param>
+			<message>必须输入用户名</message>
+		</field-validator>
+	</field>
+	
+	<field name="user.password">
+		<field-validator type="requiredstring" short-circuit="true">
+			<param name="trim">true</param>
+			<message>必须输入密码</message>
+		</field-validator>
+	</field>
+	
+	<field name="user.email">
+		<field-validator type="requiredstring" short-circuit="true">
+			<param name="trim">true</param>
+			<message>必须输入邮箱</message>
+		</field-validator>
+		<field-validator type="email">
+			<message>请输入正确的邮箱</message>
+		</field-validator>
+	</field>		
+</validators>

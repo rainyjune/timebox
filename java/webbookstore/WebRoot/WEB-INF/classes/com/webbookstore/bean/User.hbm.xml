@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.webbookstore.bean.User" table="user">
+		<id name="userid" type="java.lang.Integer">
+			<column name="user_id_" />
+			<generator class="native"/>
+		</id>
+		
+		<property name="username" column="user_name_" type="java.lang.String"/>
+		
+		<property name="password" column="password_" type="java.lang.String"/>
+		
+		<property name="sex" column="sex_" type="java.lang.String"/>
+		
+		<property name="age" column="age_" type="java.lang.Integer"/>
+		
+		<set name="orders" inverse="true">
+			<key>
+				<column name="user_id_"></column>
+			</key>
+			<one-to-many class="com.webbookstore.bean.Orders"/>
+		</set>
+	</class>
+
+</hibernate-mapping>

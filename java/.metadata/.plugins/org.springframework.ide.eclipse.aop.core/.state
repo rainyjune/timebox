@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="webbookstore"/>
+<aop-project name="webLearning"/>
+<aop-project name="struts2"/>
+<aop-project name="Business"/>
+<aop-project name="springSecurity"/>
+<aop-project name="struts1"/>
+</aop-reference-model>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<http auto-config="true">
+		<intercept-url pattern="/**" access="ROLE_USER" />
+		<form-login />
+		<anonymous />
+		<http-basic />
+		<logout />
+		<remember-me />
+
+	</http>
+
+	<authentication-provider>
+		<user-service>
+			<user name="jimi" password="jimispassword" authorities="ROLE_USER, ROLE_ADMIN" />
+			<user name="bob" password="bobspassword" authorities="ROLE_USER" />
+		</user-service>
+	</authentication-provider>
+
+
+
+</beans>

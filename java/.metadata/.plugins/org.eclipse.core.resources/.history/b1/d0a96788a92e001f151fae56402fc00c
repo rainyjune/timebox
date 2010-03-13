@@ -1,0 +1,20 @@
+package jaunty.struts.orm;
+
+/**
+ * SecurityRole entity. @author MyEclipse Persistence Tools
+ */
+public class SecurityRole extends AbstractSecurityRole implements
+		java.io.Serializable {
+
+	// Constructors
+
+	/** default constructor */
+	public SecurityRole() {
+	}
+
+	/** full constructor */
+	public SecurityRole(String roleName) {
+		super(roleName);
+	}
+
+}

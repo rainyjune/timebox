@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Layout resource="/servlet/WebRoot/WEB-INF/web.xml">
+ <TreeFormPage>
+  <Memento type="FileWebApp24">
+   <Memento collapsed="false" type="Web Descriptor 2.4"/>
+   <Memento collapsed="false" type="Context Params"/>
+   <Memento collapsed="false" type="Advanced"/>
+  </Memento>
+  <Memento type="WebAppJspConfig">
+   <Memento collapsed="false" type="Taglibs"/>
+   <Memento collapsed="false" type="Property Groups"/>
+  </Memento>
+  <Memento type="WebAppFolderFilters24">
+   <Memento collapsed="false" type="Filters"/>
+   <Memento collapsed="false" type="Filter Mappings"/>
+  </Memento>
+  <Memento type="WebAppFolderListeners24">
+   <Memento collapsed="false" type="Listeners"/>
+  </Memento>
+  <Memento type="WebAppFolderContextParams">
+   <Memento collapsed="false" type="Context Params"/>
+  </Memento>
+ </TreeFormPage>
+</Layout>

@@ -1,0 +1,41 @@
+Sat Mar 13 21:47:39 CST 2010  [debug] AvalonLogSystem initialized using logfile '/home/jj/mywork/java/web/.metadata/.plugins/com.genuitec.eclipse.templates/velocity.log'
+Sat Mar 13 21:47:39 CST 2010   [info] ************************************************************** 
+Sat Mar 13 21:47:39 CST 2010   [info] Starting Jakarta Velocity v1.4
+Sat Mar 13 21:47:39 CST 2010   [info] RuntimeInstance initializing.
+Sat Mar 13 21:47:39 CST 2010   [info] Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+Sat Mar 13 21:47:39 CST 2010   [info] Trying to use logger class org.apache.velocity.runtime.log.AvalonLogSystem
+Sat Mar 13 21:47:39 CST 2010   [info] Using logger class org.apache.velocity.runtime.log.AvalonLogSystem
+Sat Mar 13 21:47:39 CST 2010   [info] Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+Sat Mar 13 21:47:39 CST 2010   [info] Resource Loader Instantiated: com.genuitec.eclipse.templates.internal.PluginResourceLoader
+Sat Mar 13 21:47:39 CST 2010   [info] ResourceCache : initialized. (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+Sat Mar 13 21:47:39 CST 2010   [info] Default ResourceManager initialization complete.
+Sat Mar 13 21:47:39 CST 2010   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+Sat Mar 13 21:47:39 CST 2010   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+Sat Mar 13 21:47:39 CST 2010   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+Sat Mar 13 21:47:39 CST 2010   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Include
+Sat Mar 13 21:47:39 CST 2010   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+Sat Mar 13 21:47:39 CST 2010   [info] Created: 20 parsers.
+Sat Mar 13 21:47:39 CST 2010   [info] Velocimacro : initialization starting.
+Sat Mar 13 21:47:39 CST 2010   [info] Velocimacro : adding VMs from VM library template : VM_global_library.vm
+Sat Mar 13 21:47:39 CST 2010   [info] ResourceManager : found VM_global_library.vm with loader com.genuitec.eclipse.templates.internal.PluginResourceLoader
+Sat Mar 13 21:47:39 CST 2010   [info] Velocimacro :  VM library template macro registration complete.
+Sat Mar 13 21:47:39 CST 2010   [info] Velocimacro : allowInline = true : VMs can be defined inline in templates
+Sat Mar 13 21:47:39 CST 2010   [info] Velocimacro : allowInlineToOverride = true : VMs defined inline may replace previous VM definitions
+Sat Mar 13 21:47:39 CST 2010   [info] Velocimacro : allowInlineLocal = true : VMs defined inline will be local to their defining template only.
+Sat Mar 13 21:47:39 CST 2010   [info] Velocimacro : messages on  : VM system will output logging messages
+Sat Mar 13 21:47:39 CST 2010   [info] Velocimacro : autoload off  : VM system will not automatically reload global library macros
+Sat Mar 13 21:47:39 CST 2010   [info] Velocimacro : initialization complete.
+Sat Mar 13 21:47:39 CST 2010   [info] Velocity successfully started.
+Sat Mar 13 21:47:39 CST 2010   [info] ResourceManager : found data/1.2/applicationContext-template-2.xml.vtl with loader com.genuitec.eclipse.templates.internal.PluginResourceLoader
+Sat Mar 13 22:02:50 CST 2010   [info] Velocimacro : added new VM : #fields( fields ) : source = templates/java/JavaClass.vtl
+Sat Mar 13 22:02:50 CST 2010   [info] Velocimacro : added new VM : #parameters( parameters ) : source = templates/java/JavaClass.vtl
+Sat Mar 13 22:02:50 CST 2010   [info] Velocimacro : added new VM : #exceptions( exceptions ) : source = templates/java/JavaClass.vtl
+Sat Mar 13 22:02:50 CST 2010   [info] Velocimacro : added new VM : #methods( methods ) : source = templates/java/JavaClass.vtl
+Sat Mar 13 22:02:50 CST 2010   [info] Velocimacro : added new VM : #implements( interfaces ) : source = templates/java/JavaClass.vtl
+Sat Mar 13 22:02:50 CST 2010   [info] ResourceManager : found templates/java/JavaClass.vtl with loader com.genuitec.eclipse.templates.internal.PluginResourceLoader
+Sat Mar 13 22:02:50 CST 2010  [error] Left side ($error) of '!=' operation has null value. Operation not possible. templates/java/JavaClass.vtl [line 60, column 15]
+Sat Mar 13 22:02:50 CST 2010  [error] Left side ($intefaces.size) of '>' operation has null value. Operation not possible. templates/java/JavaClass.vtl [line 1, column 23]
+Sat Mar 13 22:11:48 CST 2010   [info] ResourceManager : found templates/jsp/Jsp.vtl with loader com.genuitec.eclipse.templates.internal.PluginResourceLoader
+Sat Mar 13 22:11:48 CST 2010   [info] ResourceManager : found templates/jsp/JSPMetaTags.vtl with loader com.genuitec.eclipse.templates.internal.PluginResourceLoader
+Sat Mar 13 22:22:27 CST 2010   [info] ResourceManager : found templates/jsp/Jsp.vtl with loader com.genuitec.eclipse.templates.internal.PluginResourceLoader
+Sat Mar 13 22:22:27 CST 2010   [info] ResourceManager : found templates/jsp/JSPMetaTags.vtl with loader com.genuitec.eclipse.templates.internal.PluginResourceLoader

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="HelloForm" type="jaunty.struts1.form.HelloForm" />
+		<form-bean name="AddRoleForm" type="jaunty.struts1.form.AddRoleForm"></form-bean>
+
+	</form-beans>
+
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+
+
+		<action path="/welcome"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="/jsp/welcome.jsp" />
+
+		<action path="/sayHello"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="form" path="/jsp/say_hello.jsp"></forward>
+		</action>
+
+		<action name="HelloForm" validate="true" input="/sayHello.do"
+			path="/sayHelloSubmit" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="sayHello" path="/jsp/say.jsp"></forward>
+		</action>
+		<action input="/addRole.do" name="AddRoleForm"
+			path="/addRole" scope="request" type="jaunty.struts1.action.AddRoleAction" cancellable="true">
+			<forward name="addRoleForm" path="/jsp/add_role_form.jsp" />
+			<forward name="success" path="/jsp/add_role_success.jsp" />
+		</action>
+
+
+	</action-mappings>
+
+	<message-resources parameter="jaunty.struts1.ApplicationResources" />
+
+	<plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/classes/applicationContext-*.xml" />
+	</plug-in>
+
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/org/apache/struts/validator/validator-rules.xml, /WEB-INF/validation.xml" />
+	</plug-in>
+
+</struts-config>
+

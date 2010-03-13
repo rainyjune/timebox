@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.webbookstore.bean.Catalog" table="catalog">
+		<id name="catalogId" type="java.lang.Integer">
+			<column name="catalog_id_"/>
+			<generator class="native"/>
+		</id>
+		
+		<property name="catalogName" column="catalog_name_" type="java.lang.String"/>
+		
+		<set name="books">
+			<key>
+				<column name="catalog_id_"/>
+			</key>
+			<one-to-many class="com.webbookstore.bean.Book"/>
+		</set>
+	</class>
+
+</hibernate-mapping>

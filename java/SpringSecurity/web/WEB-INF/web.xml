@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="Yoda" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>Yoda</display-name>
+
+    <!-- Spring ApplicationContext Definition -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/classes/context/applicationContext-*.xml</param-value>
+    </context-param>
+    
+    <!-- Spring security Filter -->
+    <filter>
+	  <filter-name>springSecurityFilterChain</filter-name>
+	  <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+
+	<filter-mapping>
+	  <filter-name>springSecurityFilterChain</filter-name>
+	  <url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>index</servlet-name>
+		<servlet-class>com.javaeye.sample.web.servlet.Index</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>index</servlet-name>
+		<url-pattern>/index</url-pattern>
+	</servlet-mapping>
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    
+    <listener>
+        <listener-class>com.javaeye.sample.web.loader.ServletContextLoaderListener</listener-class>
+    </listener>
+    
+    
+             
+</web-app>

@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1264166038217
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1264166038217
+java.vm.specification.version,sysinfo,,,"1.0",1264166038218
+java.vm.vendor,sysinfo,,,"Sun Microsystems Inc.",1264166038218
+java.vm.version,sysinfo,,,"14.1-b02",1264166038218
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1264166042481
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1264166042553
+closed,view,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.internal.introview",1264166042598
+started,bundle,org.eclipse.debug.core,3.5.0.v20090526-1600,"org.eclipse.debug.core",1264166049232
+started,bundle,org.eclipse.jdt.launching,3.5.0.v20090527,"org.eclipse.jdt.launching",1264166049240
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1264166051410
+started,bundle,org.eclipse.core.filesystem,1.2.0.v20090507,"org.eclipse.core.filesystem",1264166073481
+started,bundle,org.eclipse.contribution.weaving.jdt,2.0.2.e35x-20100105-0900,"org.eclipse.contribution.weaving.jdt",1264166089961
+started,bundle,org.eclipse.jdt.apt.core,3.3.201.R35x_v20090818-0235,"org.eclipse.jdt.apt.core",1264166149480
+started,bundle,org.eclipse.jdt.apt.pluggable.core,1.0.201.R35x_v20090818-0225,"org.eclipse.jdt.apt.pluggable.core",1264166149511
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1264166149670
+started,bundle,org.eclipse.ltk.core.refactoring,3.5.0.v20090513-2000,"org.eclipse.ltk.core.refactoring",1264166163856
+started,bundle,org.eclipse.ltk.ui.refactoring,3.4.100.v20090604,"org.eclipse.ltk.ui.refactoring",1264166163856
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1264166164101
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1264166185488
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1264166190176
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1264166329425
+started,bundle,org.eclipse.compare,3.5.0.I20090514-0808,"org.eclipse.compare",1264166336560
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.copy",1264166336940
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1264166345910

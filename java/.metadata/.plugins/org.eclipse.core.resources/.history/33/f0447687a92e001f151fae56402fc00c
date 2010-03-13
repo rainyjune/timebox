@@ -1,0 +1,24 @@
+#MyEclipse Hibernate Properties
+#Sat Mar 13 21:54:10 CST 2010
+sessionFactoryName=jaunty.struts.orm.HibernateSessionFactory
+genBasicCompId=true
+profile=
+daoSFId=sessionFactory
+version=3.2
+jndiPath=
+detectM2M=true
+reStrategyClass=
+detectO2O=true
+springDaoFile=conf/applicationContext-data.xml
+useJavaTypes=true
+keyGenerator=native
+libInstallFolder=WebRoot/WEB-INF/lib
+addLibs2Project=true
+genVersionTag=true
+sessionFactoryId=sessionFactory
+basePersistenceClass=
+genAnnotations=false
+reSettingsFile=
+configFile=/struts1/conf/applicationContext-data.xml
+createConfigFile=false
+addLibs2Classpath=true

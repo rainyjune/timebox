@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<!-- 配置网络书店用户管理的DAO层 -->
+	<bean id="userDAO" class="com.webbookstore.dao.impl.UserDAOImpl">
+		<property name="baseDAO" ref="baseDAO"></property>
+	</bean>
+	<!-- 配置网络书店书籍分类管理的DAO层 -->
+	<bean id="catalogDAO" class="com.webbookstore.dao.impl.CatalogDAOImpl">
+		<property name="baseDAO" ref="baseDAO"></property>
+	</bean>
+	<!-- 配置网络书店书籍信息管理的DAO层 -->
+	<bean id="bookDAO" class="com.webbookstore.dao.impl.BookDAOImpl">
+		<property name="baseDAO" ref="baseDAO"></property>
+	</bean>
+	<!-- 配置网络书店订单管理的DAO层 -->
+	<bean id="ordersDAO" class="com.webbookstore.dao.impl.OrdersDAOImpl">
+		<property name="baseDAO" ref="baseDAO"></property>
+	</bean>
+
+	<!-- 配置网络书店用户管理的Service层 -->
+	<bean id="userService" class="com.webbookstore.service.impl.UserServiceImpl">
+		<property name="userDAO" ref="userDAO" />
+	</bean>
+	<!-- 配置网络书店书籍分类管理的Service层 -->
+	<bean id="catalogService" class="com.webbookstore.service.impl.CatalogServiceImpl">
+		<property name="catalogDAO" ref="catalogDAO"></property>
+	</bean>
+	<!-- 配置网络书店书籍管理的Service层 -->
+	<bean id="bookService" class="com.webbookstore.service.impl.BookServiceImpl">
+		<property name="bookDAO" ref="bookDAO"></property>
+		<property name="search" ref="fulltextLucene"></property>
+	</bean>
+	<!-- 配置网络书店订单管理的Service层 -->
+	<bean id="orderService" class="com.webbookstore.service.impl.OrderServiceImpl">
+		<property name="ordersDAO" ref="ordersDAO"></property>
+	</bean>
+
+	<!-- 配置网络书店用户管理的Action层 -->
+	<bean id="userAction" class="com.webbookstore.action.UserAction"
+		scope="prototype">
+		<property name="userService" ref="userService"></property>
+	</bean>
+	<!-- 配置网络书店书籍分类管理的Action层 -->
+	<bean id="bookAction" class="com.webbookstore.action.BookAction"
+		scope="prototype">
+		<property name="catalogService" ref="catalogService"></property>
+		<property name="bookService" ref="bookService"></property>
+	</bean>
+	<!-- 配置网络书店购物车管理的Action层 -->
+	<bean id="shopAction" class="com.webbookstore.action.ShopingAction"
+		scope="prototype">
+		<property name="bookService" ref="bookService"></property>
+		<property name="orderService" ref="orderService"></property>
+	</bean>
+	<!-- 配置搜索 -->
+	<bean id="fulltextLucene" class="com.webbookstore.search.FulltextLucene">
+		<property name="bookDAO" ref="bookDAO"></property>
+	</bean>
+</beans>

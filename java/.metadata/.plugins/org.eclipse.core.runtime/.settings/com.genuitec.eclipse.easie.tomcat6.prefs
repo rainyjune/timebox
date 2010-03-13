@@ -1,0 +1,9 @@
+#Thu Feb 04 23:00:20 CST 2010
+SERVER_ENABLEMENT=true
+LIBRARY_PATH="/usr/lib/jvm/java-6-sun-1.6.0.15/bin\:/opt/apache-tomcat-6.0.18/bin"
+eclipse.preferences.version=1
+JDK_HOME=/usr/lib/jvm/java-6-sun-1.6.0.15
+TOMCAT_BASE=/opt/apache-tomcat-6.0.18
+ENDORSED_DIRS="/opt/apache-tomcat-6.0.18/common/endorsed"
+TOMCAT_HOME=/opt/apache-tomcat-6.0.18
+TOMCAT_TEMP=/opt/apache-tomcat-6.0.18/temp

@@ -1,0 +1,22 @@
+package jaunty.struts.orm;
+
+
+
+/**
+ * SecurityUser entity. @author MyEclipse Persistence Tools
+ */
+public class SecurityUser extends AbstractSecurityUser implements java.io.Serializable {
+
+    // Constructors
+
+    /** default constructor */
+    public SecurityUser() {
+    }
+
+    
+    /** full constructor */
+    public SecurityUser(String username, String password) {
+        super(username, password);        
+    }
+   
+}

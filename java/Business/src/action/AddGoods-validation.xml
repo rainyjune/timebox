@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+        "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+        "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+<validators>
+	<field name="goods_name">
+		<field-validator type="requiredstring" short-circuit="true">
+			<param name="trim">true</param>
+			<message>必须输入货物名称</message>
+		</field-validator>
+	</field>
+	
+	<field name="goods_price">
+		<field-validator type="double" short-circuit="true">
+			<param name="minExclusive">0</param>
+			<message>你输入的货物价格不符合标准</message>
+		</field-validator>
+	</field>
+	
+	<field name="goods_endtime">
+		<field-validator type="date" short-circuit="true">
+			<message>必须输入货物最后截止日期。请输入正确的日期形式</message>
+		</field-validator>
+		
+		<field-validator type="date">
+			<param name="max">2020-12-30</param>
+			<param name="min">2000-1-1</param>
+			<message>你输入的日期必须在2000-1-1和2020-12-30之间</message>
+		</field-validator>		
+	</field>		
+</validators>

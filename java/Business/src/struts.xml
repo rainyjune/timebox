@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.custom.i18n.resources" value="messageResource"></constant>
+	<package name="struts" extends="jfreechart-default">
+
+		<interceptors>
+		
+			<interceptor name="userInterceptor" class="interceptor.UserInterceptor"></interceptor>
+			
+			<interceptor-stack name="myInterceptor">
+				<interceptor-ref name="userInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+			
+		</interceptors>
+		<default-interceptor-ref name="myInterceptor"></default-interceptor-ref>
+
+		<global-results>
+			<result name="stop">/index.jsp</result>
+		</global-results>
+			
+		<action name="Chart" class="action.Chart">
+			<result type="chart">
+				<param name="width">800</param>
+				<param name="height">800</param>
+			</result>
+		</action>
+		<action name="Regist" class="action.Regist">
+			<result name="success">/regist/registSuccess.jsp</result>
+			<result name="input">/regist/regist.jsp</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		<action name="Login" class="action.Login">
+			<result name="success">/main.jsp</result>
+			<result name="input">/login/login.jsp</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		<action name="AddBasket" class="action.AddBasket">
+			<result name="success">/pay.jsp</result>
+			<result name="input">/main.jsp</result>
+		</action>
+		<action name="OutBasket" class="action.OutBasket">
+			<result name="success">/pay.jsp</result>
+			<result name="input">/main.jsp</result>
+		</action>
+		<action name="AddResult" class="action.AddResult">
+			<result name="success">/bank.jsp</result>
+			<result name="input">/pay.jsp</result>
+			<result name="fail">/login/login.jsp</result>
+		</action>
+		<action name="AddGoods" class="action.AddGoods">
+			<result name="success">/goods/success.jsp</result>
+			<result name="input">/goods/add.jsp</result>
+		</action>
+		<action name="AddAd" class="action.AddAd">
+			<param name="savePath">upload</param>
+			<result name="success">/ad/success.jsp</result>
+			<result name="input">/ad/addAd.jsp</result>
+		</action>
+	</package>
+</struts>

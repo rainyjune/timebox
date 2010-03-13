@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="PreferencesImportWizard">
+	</section>
+	<section name="FileSystemImportWizard">
+		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
+		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID"/>
+		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="/home/jj/Documents/毕业设计/com"/>
+			<item value="/home/jj/Documents/毕业设计/com/vista"/>
+		</list>
+	</section>
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+		<item value="76" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="ZipFileExportWizard">
+		<item value="true" key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID"/>
+		<item value="true" key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID"/>
+		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="/media/0948-32AD/security.zip"/>
+		</list>
+	</section>
+	<section name="InstallationDialogSettings">
+		<item value="688" key="DIALOG_WIDTH"/>
+		<item value="-125" key="DIALOG_Y_ORIGIN"/>
+		<item value="718" key="DIALOG_HEIGHT"/>
+		<item value="-21" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Microsoft YaHei|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="NewWizardAction">
+		<item value="com.genuitec.eclipse.struts.wizards.NewFormCreationWizardX1_3" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="com.genuitec.eclipse.myeclipse"/>
+			<item value="com.genuitec.eclipse.myeclipse/com.genuitec.eclipse.myeclipse.webstruts"/>
+			<item value="com.genuitec.eclipse.myeclipse/com.genuitec.eclipse.myeclipse.webstruts/com.genuitec.eclipse.struts1_3"/>
+		</list>
+	</section>
+	<section name="ZipFileImportWizard">
+		<item value="false" key="WizardZipFileResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
+		<list key="WizardZipFileResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="/opt/java_lib/struts-2.1.8.1/apps/struts2-blank-2.1.8.1.war"/>
+		</list>
+	</section>
+	<section name="ShowViewDialog">
+		<item value="346" key="DIALOG_WIDTH"/>
+		<item value="com.genuitec.eclipse.sqlexplorer.views.DatabaseView" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
+		<item value="60" key="DIALOG_Y_ORIGIN"/>
+		<item value="337" key="DIALOG_X_ORIGIN"/>
+		<item value="448" key="DIALOG_HEIGHT"/>
+		<item value="1|Microsoft YaHei|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="com.genuitec.eclipse.views.myEclipseDBCategory"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.preferences.keysPreferencePage">
+		<item value="true" key="uncategorizedFilter"/>
+		<item value="true" key="internalFilter"/>
+		<item value="true" key="actionSetFilter"/>
+	</section>
+	<section name="ImportExportAction">
+		<item value="org.eclipse.ui.wizards.import.ZipFile" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<item value="org.eclipse.ui.wizards.export.ZipFile" key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+		<list key="ImportExportPage.STORE_EXPANDED_EXPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+	</section>
+</section>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/welcome.do" location="502,515" dimension="382,108" />
+  <StrutsActivity path="/sayHello.do" location="57,0" dimension="382,108" />
+  <StrutsActivity path="/sayHelloSubmit.do" location="237,208" dimension="382,108" />
+  <StrutsActivity path="/addRole.do" location="92,545" dimension="263,108" />
+  <StrutsActivity path="/jsp/say_hello.jsp" location="0,235" dimension="137,54" />
+  <StrutsActivity path="/jsp/say.jsp" location="377,416" dimension="102,54" />
+  <StrutsActivity path="/jsp/add_role_form.jsp" location="0,753" dimension="170,54" />
+  <StrutsActivity path="/jsp/add_role_success.jsp" location="270,753" dimension="187,54" />
+  <StrutsTransition id="/sayHello.do,form,/jsp/say_hello.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="152,108" />
+      <AbsolutePoint location="152,158" />
+      <AbsolutePoint location="68,158" />
+      <AbsolutePoint location="68,235" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/sayHelloSubmit.do,sayHello,/jsp/say.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="428,316" />
+      <AbsolutePoint location="428,416" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addRole.do,addRoleForm,/jsp/add_role_form.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="158,653" />
+      <AbsolutePoint location="158,703" />
+      <AbsolutePoint location="85,703" />
+      <AbsolutePoint location="85,753" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addRole.do,success,/jsp/add_role_success.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="290,653" />
+      <AbsolutePoint location="290,703" />
+      <AbsolutePoint location="363,703" />
+      <AbsolutePoint location="363,753" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addRole.do,null,/addRole.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="224,545" />
+      <AbsolutePoint location="224,515" />
+      <AbsolutePoint location="62,515" />
+      <AbsolutePoint location="62,599" />
+      <AbsolutePoint location="92,599" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/sayHello.do,null,/sayHelloSubmit.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="343,108" />
+      <AbsolutePoint location="343,158" />
+      <AbsolutePoint location="428,158" />
+      <AbsolutePoint location="428,208" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

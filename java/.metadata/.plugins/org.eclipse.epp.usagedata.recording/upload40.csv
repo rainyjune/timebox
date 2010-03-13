@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1264254139119
+started,bundle,org.eclipse.equinox.p2.ui,1.0.100.v20090527-1812,"org.eclipse.equinox.p2.ui",1264254142492
+started,bundle,org.eclipse.equinox.p2.ui.sdk,1.0.100.v20090520-1905,"org.eclipse.equinox.p2.ui.sdk",1264254142494
+started,bundle,org.eclipse.equinox.p2.metadata,1.0.100.v20090525,"org.eclipse.equinox.p2.metadata",1264254142831
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1264254149169
+error,log,,,"Unable to load the repository http://springide.org/updatesite",1264254149401
+error,log,,,"Unable to load the repository http://download.eclipse.org/modeling/mdt/updates/",1264254149810
+error,log,,,"Unable to load the repository http://download.eclipse.org/technology/epp/packages/galileo",1264254150166
+error,log,,,"Unable to load the repository http://download.eclipse.org/tools/mylyn/update/e3.4/",1264254150586
+error,log,,,"Unable to load the repository http://download.eclipse.org/tools/ajdt/35/update",1264254150894
+error,log,,,"Unable to load the repository http://download.eclipse.org/eclipse/updates/3.5",1264254151193
+error,log,,,"Unable to load the repository http://download.eclipse.org/releases/galileo",1264254151484
+error,log,,,"Unable to load the repository http://springide.com/updatesite",1264254151778
+started,bundle,org.eclipse.equinox.p2.updatesite,1.0.100.v20090525,"org.eclipse.equinox.p2.updatesite",1264254151818
+started,bundle,org.eclipse.equinox.p2.publisher,1.0.0.v20090527-1812,"org.eclipse.equinox.p2.publisher",1264254151829
+error,log,,,"Unable to load the repository http://www.soyatec.com/update",1264254152570
+error,log,,,"Unable to load the repository http://download.eclipse.org/tools/mylyn/update/extras",1264254152887
+started,bundle,org.eclipse.equinox.p2.artifact.repository,1.0.100.v20090527-1812,"org.eclipse.equinox.p2.artifact.repository",1264254423949
+started,bundle,org.eclipse.equinox.p2.extensionlocation,1.0.100.v20090520-1905,"org.eclipse.equinox.p2.extensionlocation",1264254424191
+executed,command,org.eclipse.equinox.p2.ui.sdk,1.0.100.v20090520-1905,"org.eclipse.equinox.p2.ui.sdk.install",1264254468600
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1264254468692
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1264254470044
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1264255010260
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1264255012982
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1264257335861

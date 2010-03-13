@@ -1,0 +1,16 @@
+2010-03-13 21:49:31,021 1      [      Worker-39] ERROR   org.hibernate.util.XMLHelper  - Error parsing XML: /home/jj/mywork/java/web/struts1/conf/applicationContext-data.xml(2) Document is invalid: no grammar found.
+2010-03-13 21:49:31,105 85     [      Worker-39] ERROR   org.hibernate.util.XMLHelper  - Error parsing XML: /home/jj/mywork/java/web/struts1/conf/applicationContext-data.xml(2) Document root element "beans", must match DOCTYPE root "null".
+2010-03-13 21:49:32,241 1221   [      Worker-39] WARN  ibernate.cfg.reveng.JDBCReader  - The JDBC driver didn't report any primary key columns in SECURITY_USER_ROLE. Asking rev.eng. strategy
+2010-03-13 21:49:32,242 1222   [      Worker-39] WARN  ibernate.cfg.reveng.JDBCReader  - Rev.eng. strategy did not report any primary key columns for SECURITY_USER_ROLE
+2010-03-13 21:54:10,164 279144 [      Worker-39] ERROR   org.hibernate.util.XMLHelper  - Error parsing XML: /home/jj/mywork/java/web/struts1/conf/applicationContext-data.xml(2) Document is invalid: no grammar found.
+2010-03-13 21:54:10,179 279159 [      Worker-39] ERROR   org.hibernate.util.XMLHelper  - Error parsing XML: /home/jj/mywork/java/web/struts1/conf/applicationContext-data.xml(2) Document root element "beans", must match DOCTYPE root "null".
+2010-03-13 21:54:11,083 280063 [      Worker-39] WARN  ibernate.cfg.reveng.JDBCReader  - The JDBC driver didn't report any primary key columns in SECURITY_USER_ROLE. Asking rev.eng. strategy
+2010-03-13 21:54:11,083 280063 [      Worker-39] WARN  ibernate.cfg.reveng.JDBCReader  - Rev.eng. strategy did not report any primary key columns for SECURITY_USER_ROLE
+2010-03-13 21:54:12,919 281899 [      Worker-39] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : generatePreciseFunctions : inline not allowed to replace existing VM
+2010-03-13 21:54:12,920 281900 [      Worker-39] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : logInfo : inline not allowed to replace existing VM
+2010-03-13 21:54:12,921 281901 [      Worker-39] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : logError : inline not allowed to replace existing VM
+2010-03-13 21:54:12,924 281904 [      Worker-39] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : executeQuery : inline not allowed to replace existing VM
+2010-03-13 21:54:13,465 282445 [      Worker-39] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : generatePreciseFunctions : inline not allowed to replace existing VM
+2010-03-13 21:54:13,465 282445 [      Worker-39] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : logInfo : inline not allowed to replace existing VM
+2010-03-13 21:54:13,466 282446 [      Worker-39] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : logError : inline not allowed to replace existing VM
+2010-03-13 21:54:13,467 282447 [      Worker-39] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : executeQuery : inline not allowed to replace existing VM
