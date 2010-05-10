@@ -11,7 +11,7 @@ public final class Globals {
 	/**
 	 * 训练集的存放路径
 	 */
-	public static final String TRANING_DATA_PATH = "/home/jj/mywork/java/CopyDetect/data/TrainingData";
+	public static final String TRANING_DATA_PATH = "data/TrainingData";
 
 	public static final String CHARSET_NAME = "GBK";
 	
