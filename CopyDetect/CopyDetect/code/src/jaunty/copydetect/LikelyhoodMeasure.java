@@ -14,68 +14,72 @@ import java.util.Set;
  */
 public class LikelyhoodMeasure {
 
-	/* private static final Logger log = Logger.getLogger(LikelyhoodMeasure.class); */
-	private Set<String> vocabulary;
-	private List<TrainingData> trainingDataList;
+    /*
+     * private static final Logger log =
+     * Logger.getLogger(LikelyhoodMeasure.class);
+     */
+    private Set<String> vocabulary;
+    private List<TrainingData> trainingDataList;
 
-	/**
-	 * 计算两个段落的似然值
-	 * 
-	 * @param data0 新实例中的一个段落
-	 * @param data1 目标训练数据中的一个段落
-	 * @return
-	 */
-	public float calculate(TrainingData data0, TrainingData data1) {
-		
-		float result = 1l;
+    /**
+     * 计算两个段落的似然值
+     * 
+     * @param data0 新实例中的一个段落
+     * @param data1 目标训练数据中的一个段落
+     * @return
+     */
+    public float calculate(TrainingData data0, TrainingData data1) {
 
-		Set<String> ss = new HashSet<String>();
-		for (String s : data0.getWords()) {
-			if (vocabulary.contains(s)) {
-				ss.add(s);
-			}
-		}
+        float result = 1l;
 
-		float n = data1.getWordCount();
-		for (String s : ss) {
-			float nk = 0;
-			for (String string : data1.getWords()) {
-				if (s.equals(string)) {
-					nk++;
-				}
-			}
-			result = result * (nk + 1) / (n + vocabulary.size()) * Globals.ZOOM_FACTOR;
-		}
+        Set<String> ss = new HashSet<String>();
+        for (String s : data0.getWords()) {
+            if (vocabulary.contains(s)) {
+                ss.add(s);
+            }
+        }
 
-		return result;
-	}
+        float n = data1.getWordCount();
+        for (String s : ss) {
+            float nk = 0;
+            for (String string : data1.getWords()) {
+                if (s.equals(string)) {
+                    nk++;
+                }
+            }
+            result = result * (nk + 1) / (n + vocabulary.size())
+                    * Globals.ZOOM_FACTOR;
+        }
 
-	/**
-	 * @return the vocabulary
-	 */
-	public Set<String> getVocabulary() {
-		return vocabulary;
-	}
+        return result;
+    }
 
-	/**
-	 * @param vocabulary the vocabulary to set
-	 */
-	public void setVocabulary(Set<String> vocabulary) {
-		this.vocabulary = vocabulary;
-	}
+    /**
+     * @return the vocabulary
+     */
+    public Set<String> getVocabulary() {
+        return vocabulary;
+    }
 
-	/**
-	 * @return the trainingDataList
-	 */
-	public List<TrainingData> getTrainingDataList() {
-		return trainingDataList;
-	}
+    /**
+     * @param vocabulary the vocabulary to set
+     */
+    public void setVocabulary(Set<String> vocabulary) {
+        this.vocabulary = vocabulary;
+    }
 
-	/**
-	 * @param trainingDataList the trainingDataList to set
-	 */
-	public void setTrainingDataList(List<TrainingData> trainingDataList) {
-		this.trainingDataList = trainingDataList;
-	}
+    /**
+     * @return the trainingDataList
+     */
+    public List<TrainingData> getTrainingDataList() {
+        return trainingDataList;
+    }
+
+    /**
+     * @param trainingDataList the trainingDataList to set
+     */
+    public void setTrainingDataList(List<TrainingData> trainingDataList) {
+        this.trainingDataList = trainingDataList;
+    }
 
 }

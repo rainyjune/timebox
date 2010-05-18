@@ -35,7 +35,8 @@ public class VocabularyManager {
 	 */
 	private String trainingDataPath = Globals.TRANING_DATA_PATH;
 
-	private static final Logger log = Logger.getLogger(VocabularyManager.class);
+	private static final Logger log = Logger
+	        .getLogger(VocabularyManager.class);
 
 	public VocabularyManager() {
 	}
@@ -49,17 +50,19 @@ public class VocabularyManager {
 	 */
 	public void buildVocabulary() {
 
-		File trainingDataDirectory = new File(trainingDataPath);
-		File[] paperFiles = trainingDataDirectory.listFiles(new FileFilter() {
-			@Override
-			public boolean accept(File arg0) {
-				if (arg0.isFile()) {
-					return true;
-				} else {
-					return false;
-				}
-			}
-		});
+		File trainingDataDirectory = new File(
+		        trainingDataPath);
+		File[] paperFiles = trainingDataDirectory
+		        .listFiles(new FileFilter() {
+			        @Override
+			        public boolean accept(File arg0) {
+				        if (arg0.isFile()) {
+					        return true;
+				        } else {
+					        return false;
+				        }
+			        }
+		        });
 
 		if (paperFiles == null) {
 			log.fatal("路径不对?");
@@ -69,8 +72,11 @@ public class VocabularyManager {
 		BufferedReader in = null;
 		for (File paperFile : paperFiles) {
 			try {
-				in = new BufferedReader(new InputStreamReader(
-				        new FileInputStream(paperFile), Globals.CHARSET_NAME));
+				in = new BufferedReader(
+				        new InputStreamReader(
+				                new FileInputStream(
+				                        paperFile),
+				                Globals.CHARSET_NAME));
 			} catch (FileNotFoundException e) {
 				log.fatal("failed to read training data...");
 				throw new RuntimeException(e);
