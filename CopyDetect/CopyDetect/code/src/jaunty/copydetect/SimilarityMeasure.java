@@ -113,6 +113,11 @@ public class SimilarityMeasure {
 		List<SimilarityResult> results = new ArrayList<SimilarityResult>();
 
 		for (TrainingData data : trainingDataManager.getTrainingDataList()) {
+		    /* 如果训练集中的段落词语个数少于 30 的，忽略 */
+//		    if (paragraph.getWordCount() - data.getWordCount() > 20) {
+//		        continue;
+//		    }
+		    
 			float likelyhood = likelyhoodMeasure.calculate(paragraph, data);
 			float similarity = priorProbabilityMeasure.calculate() * likelyhood;
 
@@ -146,6 +151,10 @@ public class SimilarityMeasure {
 	}
 
 	public void measure() {
+	    if (paragraphes == null) {
+	        return;
+	    }
+	    
 		for (TrainingData paragraph : paragraphes) {
 			// List<SimilarityResult> results = calculate(paragraph);
 			// for (SimilarityResult result : results) {
@@ -170,5 +179,23 @@ public class SimilarityMeasure {
 			        + " 段的相似度为 "
 			        + result.getSimilarity());
 		}
+	}
+	
+	public List<SimilarityResult> measure(boolean isGUIRunning) {
+
+	   if (paragraphes == null) {
+	       return null;
+	   }
+	   List<SimilarityResult> ret = new LinkedList<SimilarityResult>();
+	   
+	   for (TrainingData paragraph : paragraphes) {
+	       /* 不计算少于 20 字的段落 */
+	       if (paragraph.getWordCount() < 30) {
+	           continue;
+	       }
+	       ret.add(calculate(paragraph));
+	   }
+	   
+	   return ret;
 	}
 }
