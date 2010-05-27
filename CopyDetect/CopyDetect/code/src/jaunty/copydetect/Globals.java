@@ -20,5 +20,5 @@ public final class Globals {
 	 * 
 	 * XXX 这个很关键，特别是在训练集的数据变化时，必须修改这个参数。
 	 */
-	public static final float ZOOM_FACTOR = 1000;
+	public static final float ZOOM_FACTOR = 4000;
 }

@@ -101,27 +101,35 @@ public class MainJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
                 layout.createParallelGroup(
-                javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 900,
-                Short.MAX_VALUE));
+                        javax.swing.GroupLayout.Alignment.LEADING).addGap(0,
+                        900,
+                        Short.MAX_VALUE));
         layout.setVerticalGroup(
                 layout.createParallelGroup(
-                javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 581,
-                Short.MAX_VALUE));
+                        javax.swing.GroupLayout.Alignment.LEADING).addGap(0,
+                        581,
+                        Short.MAX_VALUE));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jMenuItem1ActionPerformed
-        JFileChooser chooser = new JFileChooser("." + File.separator + "data" + File.separator + "待检测论文");
+        JFileChooser chooser = new JFileChooser("." + File.separator + "data"
+                + File.separator + "待检测论文");
         chooser.showOpenDialog(jMenu1);
         final File selectedFile = chooser.getSelectedFile();
         if (selectedFile != null) {
             // calculating();
-
+            long time0 = System.currentTimeMillis();
             SimilarityMeasure similarityMeasure = new SimilarityMeasure(
                     selectedFile.getAbsolutePath());
-
+            long time1 = System.currentTimeMillis();
             newPanel(similarityMeasure.measure(true));
+            long time2 = System.currentTimeMillis();
+
+            JOptionPane.showMessageDialog(this, "处理待比较数据集用时 " + (time1 - time0)
+                    + " 毫秒\n抄袭检测用时 " + (time2 - time1) + " 毫秒", "用时统计",
+                    JOptionPane.INFORMATION_MESSAGE);
 
         } else {
             log.debug("you do not choose any file");
@@ -191,7 +199,7 @@ public class MainJFrame extends javax.swing.JFrame {
                     + " 的第 " + data.get(i).getTrainingData().getParagraphId()
                     + " 段落相似，相似度为 " + data.get(i).getSimilarity());
             jTextPane.setSize(700, 15);
-            
+
             jTextArea1.setColumns(20);
             jTextArea1.setLineWrap(true);
             jTextArea1.setRows(5);
@@ -207,45 +215,55 @@ public class MainJFrame extends javax.swing.JFrame {
             javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(
                     jPanel1);
             jPanel1.setLayout(jPanel1Layout);
-            jPanel1Layout.setHorizontalGroup(
-                    jPanel1Layout.createParallelGroup(
-                    javax.swing.GroupLayout.Alignment.LEADING).addComponent(jTextPane,  javax.swing.GroupLayout.DEFAULT_SIZE, 750, Short.MAX_VALUE)
-                    .addGroup(
-                    javax.swing.GroupLayout.Alignment.TRAILING,
-                    jPanel1Layout.createSequentialGroup().addComponent(
-                    jScrollPane1,
-                    javax.swing.GroupLayout.DEFAULT_SIZE, 400,
-                    Short.MAX_VALUE).addPreferredGap(
-                    javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(jScrollPane2,
-                    javax.swing.GroupLayout.PREFERRED_SIZE,
-                    438,
-                    javax.swing.GroupLayout.PREFERRED_SIZE)));
+            jPanel1Layout
+                    .setHorizontalGroup(
+                    jPanel1Layout
+                            .createParallelGroup(
+                                    javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextPane,
+                                    javax.swing.GroupLayout.DEFAULT_SIZE, 750,
+                                    Short.MAX_VALUE)
+                            .addGroup(
+                                    javax.swing.GroupLayout.Alignment.TRAILING,
+                                    jPanel1Layout
+                                            .createSequentialGroup()
+                                            .addComponent(
+                                                    jScrollPane1,
+                                                    javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                    400,
+                                                    Short.MAX_VALUE)
+                                            .addPreferredGap(
+                                                    javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(
+                                                    jScrollPane2,
+                                                    javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                    438,
+                                                    javax.swing.GroupLayout.PREFERRED_SIZE)));
             jPanel1Layout
                     .setVerticalGroup(
                     jPanel1Layout
-                    .createParallelGroup(
-                    javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(
-                    jPanel1Layout
-                    .createSequentialGroup()
-                    .addComponent(jTextPane)
-                    .addPreferredGap(
-                    javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(
-                    jPanel1Layout
-                    .createParallelGroup(
-                    javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(
-                    jScrollPane2,
-                    javax.swing.GroupLayout.DEFAULT_SIZE,
-                    227,
-                    Short.MAX_VALUE)
-                    .addComponent(
-                    jScrollPane1,
-                    javax.swing.GroupLayout.DEFAULT_SIZE,
-                    227,
-                    Short.MAX_VALUE))));
+                            .createParallelGroup(
+                                    javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(
+                                    jPanel1Layout
+                                            .createSequentialGroup()
+                                            .addComponent(jTextPane)
+                                            .addPreferredGap(
+                                                    javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addGroup(
+                                                    jPanel1Layout
+                                                            .createParallelGroup(
+                                                                    javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addComponent(
+                                                                    jScrollPane2,
+                                                                    javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                    227,
+                                                                    Short.MAX_VALUE)
+                                                            .addComponent(
+                                                                    jScrollPane1,
+                                                                    javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                    227,
+                                                                    Short.MAX_VALUE))));
             panels[i] = jPanel1;
         }
 
@@ -273,7 +291,7 @@ public class MainJFrame extends javax.swing.JFrame {
                     javax.swing.GroupLayout.DEFAULT_SIZE,
                     javax.swing.GroupLayout.PREFERRED_SIZE);
         }
-        //sequentialGroup.addContainerGap(298, Short.MAX_VALUE);
+        // sequentialGroup.addContainerGap(298, Short.MAX_VALUE);
         parallelGroup2.addGroup(sequentialGroup);
         layout1.setVerticalGroup(parallelGroup2);
 
@@ -285,20 +303,27 @@ public class MainJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout2);
         layout2.setHorizontalGroup(
                 layout2.createParallelGroup(
-                javax.swing.GroupLayout.Alignment.LEADING).addGroup(
-                layout2.createSequentialGroup().addContainerGap().addComponent(
-                jScrollPane,
-                javax.swing.GroupLayout.DEFAULT_SIZE, 900,
-                Short.MAX_VALUE).addContainerGap()));
+                        javax.swing.GroupLayout.Alignment.LEADING).addGroup(
+                        layout2.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(
+                                        jScrollPane,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                        900,
+                                        Short.MAX_VALUE).addContainerGap()));
         layout2.setVerticalGroup(
                 layout2.createParallelGroup(
-                javax.swing.GroupLayout.Alignment.LEADING).addGroup(
-                layout2.createSequentialGroup().addContainerGap().addComponent(
-                jScrollPane,
-                javax.swing.GroupLayout.PREFERRED_SIZE, 581,
-                javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE,
-                Short.MAX_VALUE)));
+                        javax.swing.GroupLayout.Alignment.LEADING).addGroup(
+                        layout2.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(
+                                        jScrollPane,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        581,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(
+                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                        Short.MAX_VALUE)));
         pack();
 
     }
@@ -314,34 +339,46 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel1.setText("计算中......");
 
         JPanel jPanel1 = new JPanel();
-  
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(
+                jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(381, 381, 381)
-                .addComponent(jLabel1)
-                .addContainerGap(392, Short.MAX_VALUE))
-        );
+                jPanel1Layout.createParallelGroup(
+                        javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(381, 381, 381)
+                                .addComponent(jLabel1)
+                                .addContainerGap(392, Short.MAX_VALUE))
+                );
         jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(218, 218, 218)
-                .addComponent(jLabel1)
-                .addContainerGap(345, Short.MAX_VALUE))
-        );
+                jPanel1Layout.createParallelGroup(
+                        javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(218, 218, 218)
+                                .addComponent(jLabel1)
+                                .addContainerGap(345, Short.MAX_VALUE))
+                );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(
+                getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(
+                        javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1,
+                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                Short.MAX_VALUE)
+                );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(
+                        javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1,
+                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                Short.MAX_VALUE)
+                );
 
         pack();
     }
