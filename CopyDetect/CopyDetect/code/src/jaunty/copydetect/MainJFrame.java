@@ -141,7 +141,7 @@ public class MainJFrame extends javax.swing.JFrame {
     }// GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jMenuItem3ActionPerformed
-        JOptionPane.showMessageDialog(null, "一种基于贝叶斯的抄袭检测方法",
+        JOptionPane.showMessageDialog(null, "一种基于贝叶斯的抄袭检测方法\n算法演示程序",
                 "一种基于贝叶斯的抄袭检测方法", JOptionPane.INFORMATION_MESSAGE);
     }// GEN-LAST:event_jMenuItem3ActionPerformed
 
